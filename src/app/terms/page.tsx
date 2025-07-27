@@ -3,12 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export default function TermsPage() {
   return (
     <div className="container py-12 md:py-16">
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-3xl md:text-4xl font-headline">Điều Khoản Sử Dụng Dịch Vụ</CardTitle>
-          <p className="text-muted-foreground pt-2">Cập nhật lần cuối: 14/07/2024</p>
-        </CardHeader>
-        <CardContent className="prose max-w-none dark:prose-invert">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Điều Khoản Dịch Vụ</h1>
+        <p className="mt-4 text-lg text-muted-foreground">Cập nhật lần cuối: 14/07/2024</p>
+      </div>
+      
+      <Card className="max-w-4xl mx-auto">
+        <CardContent className="p-8 md:p-10 prose max-w-none dark:prose-invert">
           <h2>1. Chấp Nhận Điều Khoản</h2>
           <p>
             Bằng cách truy cập và sử dụng trang web này (sau đây gọi là "Trang Web"), bạn (sau đây gọi là "Người Dùng") đồng ý tuân thủ và bị ràng buộc bởi các Điều khoản Sử dụng Dịch vụ này ("Điều Khoản"). Nếu bạn không đồng ý với bất kỳ phần nào của các điều khoản này, bạn không được phép sử dụng Trang Web.

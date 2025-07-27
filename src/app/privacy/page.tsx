@@ -3,12 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export default function PrivacyPage() {
   return (
     <div className="container py-12 md:py-16">
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-3xl md:text-4xl font-headline">Chính Sách Bảo Mật Thông Tin</CardTitle>
-          <p className="text-muted-foreground pt-2">Cập nhật lần cuối: 14/07/2024</p>
-        </CardHeader>
-        <CardContent className="prose max-w-none dark:prose-invert">
+       <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Chính Sách Bảo Mật</h1>
+        <p className="mt-4 text-lg text-muted-foreground">Cập nhật lần cuối: 14/07/2024</p>
+      </div>
+
+      <Card className="max-w-4xl mx-auto">
+        <CardContent className="p-8 md:p-10 prose max-w-none dark:prose-invert">
           <p>
             Chính sách bảo mật này nhằm giúp Quý khách hiểu về cách chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân của mình khi truy cập và sử dụng các dịch vụ trên website của Nhân Tâm Phát.
           </p>
