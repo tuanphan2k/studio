@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Zap, Target, Users, Star } from 'lucide-react';
+import { ArrowRight, Zap, Target, Users, Star, Award, BrainCircuit, HeartHandshake } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { EmployeeCard } from '@/components/employee-card';
@@ -23,6 +23,24 @@ const benefits = [
     icon: <Users className="h-8 w-8 text-accent" />,
     title: 'Phát Triển Năng Lực Tổ Chức',
     description: 'Trang bị các kỹ năng và chiến lược cần thiết để phát triển đội ngũ và doanh nghiệp của bạn.',
+  },
+];
+
+const differentiators = [
+  {
+    icon: <Award className="h-8 w-8 text-accent" />,
+    title: '15+ Năm Kinh Nghiệm',
+    description: 'Được dẫn dắt bởi các chuyên gia có hơn 15 năm kinh nghiệm thực chiến trong ngành nhân sự.',
+  },
+  {
+    icon: <BrainCircuit className="h-8 w-8 text-accent" />,
+    title: 'Phương Pháp Hiện Đại',
+    description: 'Áp dụng các phương pháp đào tạo và tư vấn tiên tiến, tập trung vào kết quả thực tiễn.',
+  },
+  {
+    icon: <HeartHandshake className="h-8 w-8 text-accent" />,
+    title: 'Tận Tâm & Chuyên Sâu',
+    description: 'Chúng tôi cam kết đồng hành, lắng nghe và cung cấp các giải pháp phù hợp nhất cho từng khách hàng.',
   },
 ];
 
@@ -138,30 +156,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Difference Section */}
+      <section className="py-20 md:py-24">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Sự Khác Biệt Của Chúng Tôi</h2>
+            <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Uy tín của chúng tôi được xây dựng trên nền tảng chuyên môn vững chắc và sự tận tâm.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {differentiators.map((d) => (
+              <Card key={d.title} className="text-center p-2">
+                <CardHeader className="items-center">
+                  <div className="p-4 bg-accent/10 rounded-full">{d.icon}</div>
+                  <CardTitle className="font-headline text-2xl mt-4">{d.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{d.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Featured Services Section */}
-      <section className="container py-20 md:py-24">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Học & Dịch Vụ Nổi Bật</h2>
-          <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Khám phá các khóa học và dịch vụ tư vấn hàng đầu được thiết kế để nâng cao năng lực cho cá nhân và tổ chức.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredCourses.map((course) => (
-            <CourseCard key={course.id} course={course} />
-          ))}
-        </div>
-        <div className="text-center mt-12">
+      <section className="bg-card py-20 md:py-24">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Học & Dịch Vụ Nổi Bật</h2>
+            <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Khám phá các khóa học và dịch vụ tư vấn hàng đầu được thiết kế để nâng cao năng lực cho cá nhân và tổ chức.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredCourses.map((course) => (
+              <CourseCard key={course.id} course={course} />
+            ))}
+          </div>
+          <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline">
                 <Link href="/courses">
                     Xem Tất Cả Dịch Vụ <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
             </Button>
         </div>
+        </div>
       </section>
       
       {/* Meet Our Team Section */}
-       <section className="bg-card py-20 md:py-24">
+       <section className="py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-headline font-bold">Gặp Gỡ Đội Ngũ Chuyên Gia</h2>
@@ -178,7 +223,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 md:py-24">
+      <section className="bg-card py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Khách Hàng & Học Viên Nói Gì?</h2>
@@ -188,7 +233,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
-              <Card key={testimonial.name} className="flex flex-col bg-card">
+              <Card key={testimonial.name} className="flex flex-col bg-background">
                 <CardContent className="p-6 flex-grow">
                   <div className="flex mb-2">
                     {[...Array(5)].map((_, i) => (
