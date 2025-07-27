@@ -187,6 +187,21 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Contact Us Section */}
+      <section className="container py-20 md:py-24 text-center">
+        <h2 className="text-3xl md:text-4xl font-headline font-bold">Ready to Elevate Your HR?</h2>
+        <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
+          Contact us today to learn more about our courses and advisory services, and how we can help you achieve your professional goals.
+        </p>
+        <div className="mt-8">
+          <Button asChild size="lg">
+            <Link href="/contact">
+              Get in Touch <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
     </>
   );
 }
