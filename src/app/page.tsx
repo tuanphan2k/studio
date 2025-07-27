@@ -83,10 +83,10 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-headline font-extrabold tracking-tight text-primary">
-              Nâng Tầm Chuyên Môn Nhân Sự
+              Nâng Tầm Nhân Sự và Tổ Chức
             </h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
-              Khai phá tiềm năng của bạn với chương trình đào tạo và tư vấn chuyên sâu cho chuyên gia nhân sự hiện đại. Nắm vững các kỹ năng mới, thúc đẩy thành công của tổ chức và thăng tiến trong sự nghiệp.
+              Khai phá tiềm năng của bạn với các chương trình đào tạo và tư vấn chuyên sâu dành cho các chuyên gia nhân sự và lãnh đạo doanh nghiệp hiện đại.
             </p>
             <div className="mt-8 flex gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
@@ -218,9 +218,9 @@ export default function Home() {
       {/* Contact Us Section */}
       <section className="bg-card py-20 md:py-24 text-center">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">Sẵn Sàng Nâng Tầm Nhân Sự Của Bạn?</h2>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold">Sẵn Sàng Nâng Tầm Tổ Chức Của Bạn?</h2>
           <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
-            Liên hệ với chúng tôi ngay hôm nay để tìm hiểu thêm về các khóa học, dịch vụ tư vấn và cách chúng tôi có thể giúp bạn đạt được mục tiêu nghề nghiệp.
+            Liên hệ với chúng tôi ngay hôm nay để tìm hiểu thêm về các khóa học, dịch vụ tư vấn và cách chúng tôi có thể giúp bạn đạt được mục tiêu của mình.
           </p>
           <div className="mt-8">
             <Button asChild size="lg">

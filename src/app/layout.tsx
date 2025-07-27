@@ -7,8 +7,8 @@ import { Toaster } from '@/components/ui/toaster';
 import { Inter, Lexend } from 'next/font/google';
 
 export const metadata: Metadata = {
-  title: 'Nhân Tâm Phát - Đào tạo và tư vấn nhân sự chuyên nghiệp',
-  description: 'Các khóa học và dịch vụ tư vấn do chuyên gia thực hiện để nâng cao kỹ năng và sự nghiệp nhân sự của bạn.',
+  title: 'Nhân Tâm Phát - Đào tạo và tư vấn nhân sự, doanh nghiệp',
+  description: 'Các khóa học và dịch vụ tư vấn chuyên nghiệp giúp nâng cao kỹ năng nhân sự và hiệu quả hoạt động của tổ chức.',
 };
 
 const fontBody = Inter({
