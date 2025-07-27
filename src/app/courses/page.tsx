@@ -1,30 +1,18 @@
-'use client';
-
 import { courses, consultingServices } from '@/lib/data';
-import { CourseCard } from '@/components/course-card';
-import { ConsultingServiceCard } from '@/components/consulting-service-card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import type { Metadata } from 'next';
+import { ServicesTabs } from '@/components/services-tabs';
 
 export const metadata: Metadata = {
   title: 'Khóa Học & Dịch Vụ - Nhân Tâm Phát',
   description: 'Khám phá các khóa học đào tạo nhân sự chuyên sâu và dịch vụ tư vấn doanh nghiệp chiến lược tại Nhân Tâm Phát, được thiết kế cho sự phát triển của bạn.',
 };
 
-export default function ServicesPage() {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const tab = searchParams.get('tab') || 'training';
+export default function ServicesPage({ searchParams }: { searchParams?: { tab?: string }}) {
+  const tab = searchParams?.tab === 'consulting' ? 'consulting' : 'training';
 
-  const handleTabChange = (value: string) => {
-    router.push(`${pathname}?tab=${value}`, { scroll: false });
-  };
-  
   return (
     <div className="container py-12 md:py-16">
       <div className="text-center mb-12">
@@ -34,44 +22,11 @@ export default function ServicesPage() {
         </p>
       </div>
 
-      <Tabs value={tab} onValueChange={handleTabChange} className="w-full">
-        <TabsList className="grid w-full grid-cols-2 md:w-[400px] mx-auto mb-12">
-          <TabsTrigger value="training">Các Khóa Đào Tạo</TabsTrigger>
-          <TabsTrigger value="consulting">Dịch Vụ Tư Vấn</TabsTrigger>
-        </TabsList>
-        
-        <TabsContent value="training">
-          <section id="training-courses">
-            <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Đào Tạo Chuyên Sâu</h2>
-                <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-                    Nâng cao năng lực cho chuyên gia nhân sự ở mọi cấp độ.
-                </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {courses.map((course) => (
-                <CourseCard key={course.id} course={course} />
-                ))}
-            </div>
-          </section>
-        </TabsContent>
-
-        <TabsContent value="consulting">
-          <section id="consulting-services">
-            <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-headline font-bold">Dịch Vụ Tư Vấn Doanh Nghiệp</h2>
-                <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-                    Các giải pháp chiến lược được thiết kế riêng cho sự phát triển bền vững của tổ chức.
-                </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {consultingServices.map((service) => (
-                    <ConsultingServiceCard key={service.id} service={service} />
-                ))}
-            </div>
-          </section>
-        </TabsContent>
-      </Tabs>
+      <ServicesTabs 
+        initialTab={tab} 
+        courses={courses} 
+        consultingServices={consultingServices} 
+      />
 
       {/* Contact Us Section */}
       <section className="bg-primary/5 py-20 md:py-24 text-center rounded-lg mt-16">
