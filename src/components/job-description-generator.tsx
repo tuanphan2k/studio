@@ -65,7 +65,7 @@ export function JobDescriptionGenerator() {
     <Card className="w-full max-w-4xl mx-auto bg-primary/5 border-primary/20 shadow-lg">
       <CardHeader className="text-center">
         <CardTitle className="font-headline text-3xl md:text-4xl text-primary flex items-center justify-center gap-3">
-          <FileText />
+          <FileText className="shrink-0" />
           Trợ Lý AI Soạn Thảo Mô Tả Công Việc
         </CardTitle>
         <CardDescription className="text-lg mt-2 text-muted-foreground">
