@@ -128,6 +128,7 @@ export default function Home() {
                 src="https://placehold.co/600x500.png"
                 alt="Các chuyên gia nhân sự trong một cuộc họp"
                 height={500}
+                width={600}
                 className="rounded-lg shadow-2xl w-full h-auto object-cover"
                 priority
                 data-ai-hint="team meeting"
