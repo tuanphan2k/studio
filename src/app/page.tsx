@@ -68,7 +68,7 @@ export default function Home() {
               <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
                 Khai phá tiềm năng đội ngũ của bạn với các chương trình đào tạo và dịch vụ tư vấn nhân sự chuyên sâu.
               </p>
-              <div className="mt-8 flex gap-4 justify-center md:justify-start">
+              <div className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
                 <Button asChild size="lg">
                   <Link href="/services/training">
                     Khám Phá Khóa Học <ArrowRight className="ml-2 h-5 w-5" />
