@@ -5,11 +5,13 @@ import { ArrowRight, Zap, Target, Users, Award, BrainCircuit, HeartHandshake } f
 import Image from 'next/image';
 import Link from 'next/link';
 import { EmployeeCard } from '@/components/employee-card';
-import { courses, employees } from '@/lib/data';
+import { courses, consultingServices, employees } from '@/lib/data';
 import { CourseCard } from '@/components/course-card';
 import { JobDescriptionGenerator } from '@/components/job-description-generator';
 import type { Metadata } from 'next';
 import { TestimonialsCarousel } from '@/components/testimonials-carousel';
+import { ConsultingServiceCard } from '@/components/consulting-service-card';
+
 
 export const metadata: Metadata = {
   title: 'Nhân Tâm Phát - Đào tạo & Tư vấn Nhân sự Chuyên sâu',
@@ -53,7 +55,10 @@ const differentiators = [
 ];
 
 export default function Home() {
-  const featuredCourses = courses.slice(0, 3);
+  const featuredServices = [
+    ...consultingServices.slice(0, 2).map(s => ({...s, type: 'consulting'})),
+    ...courses.slice(0, 1).map(c => ({...c, type: 'training'}))
+  ];
   
   return (
     <>
@@ -154,20 +159,26 @@ export default function Home() {
       <section className="bg-card py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Học Nổi Bật</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Dịch Vụ Nổi Bật</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Khám phá các khóa học hàng đầu được thiết kế để nâng cao năng lực cho cá nhân và tổ chức.
+              Khám phá các giải pháp hàng đầu được thiết kế để nâng cao năng lực cho cá nhân và tổ chức.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredCourses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))}
+            {featuredServices.map((service: any) => {
+              if (service.type === 'training') {
+                return <CourseCard key={service.id} course={service} />;
+              }
+              if (service.type === 'consulting') {
+                return <ConsultingServiceCard key={service.id} service={service} />;
+              }
+              return null;
+            })}
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline">
                 <Link href="/services/training">
-                    Xem Tất Cả Khóa Học <ArrowRight className="ml-2 h-4 w-4" />
+                    Xem Tất Cả Dịch Vụ <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
             </Button>
         </div>

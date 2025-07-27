@@ -29,6 +29,16 @@ export type Employee = {
 
 export const courses: Course[] = [
   {
+    id: '1',
+    slug: 'lanh-dao-trong-ky-nguyen-so',
+    title: 'Lãnh Đạo Trong Kỷ Nguyên Số',
+    shortDescription: 'Nắm vững kỹ năng lãnh đạo hiện đại cho một thế giới công nghệ.',
+    longDescription: `Khóa học toàn diện này được thiết kế cho các nhà lãnh đạo tương lai và hiện tại muốn phát triển trong bối cảnh kỹ thuật số. Chúng tôi đi sâu vào các nguyên tắc cốt lõi của lãnh đạo hiệu quả, điều chỉnh chúng cho phù hợp với những thách thức và cơ hội của thế kỷ 21. Chương trình giảng dạy bao gồm nhiều chủ đề, bao gồm chuyển đổi số, ra quyết định dựa trên dữ liệu, quản lý nhóm từ xa và thúc đẩy văn hóa đổi mới. Bạn sẽ học cách tận dụng công nghệ để nâng cao năng suất của nhóm, giao tiếp hiệu quả qua các kênh kỹ thuật số và truyền cảm hứng cho nhóm của bạn để đạt được các mục tiêu đầy tham vọng. Thông qua một loạt các nghiên cứu điển hình, hội thảo tương tác và các buổi học do chuyên gia hướng dẫn, bạn sẽ có được những hiểu biết thực tế và các chiến lược hữu ích để trở thành một nhà lãnh đạo có tư duy tiến bộ. Khóa học cũng nhấn mạnh tầm quan trọng của trí tuệ cảm xúc và các cân nhắc đạo đức trong thời đại kỹ thuật số, đảm bảo bạn lãnh đạo bằng cả năng lực và sự chính trực.`,
+    thumbnail: 'https://placehold.co/600x400.png',
+    duration: '8 Tuần',
+    level: 'Nâng cao',
+  },
+  {
     id: '2',
     slug: 'nen-tang-nhan-su',
     title: 'Nền Tảng Nhân Sự',
@@ -37,26 +47,6 @@ export const courses: Course[] = [
     thumbnail: 'https://placehold.co/600x400.png',
     duration: '4 Tuần',
     level: 'Mới bắt đầu',
-  },
-  {
-    id: '4',
-    slug: 'suc-khoe-va-gan-ket-nhan-vien',
-    title: 'Sức Khỏe và Gắn Kết Nhân Viên',
-    shortDescription: 'Xây dựng một văn hóa làm việc hỗ trợ giúp tăng cường tinh thần và năng suất.',
-    longDescription: `Một lực lượng lao động vui vẻ và khỏe mạnh là một lực lượng lao động năng suất. Khóa học này cung cấp một lộ trình để tạo ra và thực hiện các chương trình chăm sóc sức khỏe và gắn kết nhân viên hiệu quả. Bạn sẽ học các nguyên tắc của tâm lý học tích cực và cách áp dụng chúng tại nơi làm việc để nuôi dưỡng ý thức về mục đích, sự công nhận và sức khỏe. Chúng tôi sẽ đề cập đến một loạt các chiến lược, từ thiết kế hệ thống hỗ trợ sức khỏe tâm thần và thúc đẩy cân bằng giữa công việc và cuộc sống đến tạo ra các chương trình công nhận và thu thập phản hồi hữu ích thông qua các cuộc khảo sát về sự gắn kết. Bạn sẽ rời khỏi khóa học này với một bộ công cụ gồm các ý tưởng thực tế để nuôi dưỡng một văn hóa tổ chức tích cực, nơi nhân viên cảm thấy được trân trọng, có động lực và gắn bó.`,
-    thumbnail: 'https://placehold.co/600x400.png',
-    duration: '5 Tuần',
-    level: 'Trung cấp',
-  },
-  {
-    id: '1',
-    slug: 'lanh-dao-trong-ky-nguyen-so',
-    title: 'Lãnh Đạo Trong Kỷ Nguyên Số',
-    shortDescription: 'Nắm vững kỹ năng lãnh đạo hiện đại cho một thế giới công nghệ.',
-    longDescription: `Khóa học toàn diện này được thiết kế cho các nhà lãnh đạo tương lai và hiện tại muốn phát triển trong bối cảnh kỹ thuật số. Chúng tôi đi sâu vào các nguyên tắc cốt lõi của lãnh đạo hiệu quả, điều chỉnh chúng cho phù hợp với những thách thức và cơ hội của thế kỷ 21. Chương trình giảng dạy bao gồm nhiều chủ đề, bao gồm chuyển đổi số, ra quyết định dựa trên dữ liệu, quản lý nhóm từ xa và thúc đẩy văn hóa đổi mới. Bạn sẽ học cách tận dụng công nghệ để nâng cao năng suất của nhóm, giao tiếp hiệu quả qua các kênh kỹ thuật số và truyền cảm hứng cho nhóm của bạn để đạt được các mục tiêu đầy tham vọng. Thông qua một loạt các nghiên cứu điển hình, hội thảo tương tác và các buổi học do chuyên gia hướng dẫn, bạn sẽ có được những hiểu biết thực tế và các chiến lược hữu ích để trở thành một nhà lãnhadata-ai-hint="team collaboration" lãnh đạo có tư duy tiến bộ. Khóa học cũng nhấn mạnh tầm quan trọng của trí tuệ cảm xúc và các cân nhắc đạo đức trong thời đại kỹ thuật số, đảm bảo bạn lãnh đạo bằng cả năng lực và sự chính trực.`,
-    thumbnail: 'https://placehold.co/600x400.png',
-    duration: '8 Tuần',
-    level: 'Nâng cao',
   },
   {
     id: '3',
@@ -69,6 +59,16 @@ export const courses: Course[] = [
     level: 'Nâng cao',
   },
   {
+    id: '4',
+    slug: 'suc-khoe-va-gan-ket-nhan-vien',
+    title: 'Sức Khỏe và Gắn Kết Nhân Viên',
+    shortDescription: 'Xây dựng một văn hóa làm việc hỗ trợ giúp tăng cường tinh thần và năng suất.',
+    longDescription: `Một lực lượng lao động vui vẻ và khỏe mạnh là một lực lượng lao động năng suất. Khóa học này cung cấp một lộ trình để tạo ra và thực hiện các chương trình chăm sóc sức khỏe và gắn kết nhân viên hiệu quả. Bạn sẽ học các nguyên tắc của tâm lý học tích cực và cách áp dụng chúng tại nơi làm việc để nuôi dưỡng ý thức về mục đích, sự công nhận và sức khỏe. Chúng tôi sẽ đề cập đến một loạt các chiến lược, từ thiết kế hệ thống hỗ trợ sức khỏe tâm thần và thúc đẩy cân bằng giữa công việc và cuộc sống đến tạo ra các chương trình công nhận và thu thập phản hồi hữu ích thông qua các cuộc khảo sát về sự gắn kết. Bạn sẽ rời khỏi khóa học này với một bộ công cụ gồm các ý tưởng thực tế để nuôi dưỡng một văn hóa tổ chức tích cực, nơi nhân viên cảm thấy được trân trọng, có động lực và gắn bó.`,
+    thumbnail: 'https://placehold.co/600x400.png',
+    duration: '5 Tuần',
+    level: 'Trung cấp',
+  },
+  {
     id: '5',
     slug: 'ung-dung-ai-trong-quan-ly-nhan-su',
     title: 'Ứng Dụng AI Trong Quản Lý Nhân Sự',
@@ -78,6 +78,16 @@ export const courses: Course[] = [
     duration: '6 Tuần',
     level: 'Nâng cao',
   },
+  {
+    id: '6',
+    slug: 'quan-ly-hieu-suat-lien-tuc',
+    title: 'Quản Lý Hiệu Suất Liên Tục',
+    shortDescription: 'Chuyển đổi từ đánh giá hàng năm sang phản hồi và huấn luyện liên tục.',
+    longDescription: 'Khóa học này giới thiệu các phương pháp hiện đại để quản lý hiệu suất, tập trung vào việc đối thoại thường xuyên, đặt mục tiêu linh hoạt (OKRs) và huấn luyện phát triển. Bạn sẽ học cách xây dựng một hệ thống quản lý hiệu suất không chỉ đo lường kết quả mà còn thúc đẩy sự phát triển, gắn kết và cải thiện liên tục của nhân viên. Chúng tôi sẽ cung cấp các công cụ và kỹ thuật để đưa ra phản hồi mang tính xây dựng, thực hiện các buổi check-in hiệu quả và liên kết hiệu suất cá nhân với mục tiêu chiến lược của tổ chức. Đây là khóa học cần thiết cho các nhà quản lý và chuyên gia nhân sự muốn xây dựng một nền văn hóa hiệu suất cao và linh hoạt.',
+    thumbnail: 'https://placehold.co/600x400.png',
+    duration: '5 Tuần',
+    level: 'Trung cấp',
+  }
 ];
 
 
