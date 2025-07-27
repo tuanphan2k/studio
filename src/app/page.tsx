@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { EmployeeCard } from '@/components/employee-card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { courses } from '@/lib/data';
+import { CourseCard } from '@/components/course-card';
 
 const benefits = [
   {
@@ -73,6 +75,7 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const featuredCourses = courses.slice(0, 3);
   return (
     <>
       {/* Hero Section */}
@@ -134,24 +137,48 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Featured Services Section */}
+      <section className="container py-20 md:py-24">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-headline font-bold">Dịch Vụ Nổi Bật Của Chúng Tôi</h2>
+          <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Khám phá các khóa học và dịch vụ tư vấn hàng đầu được thiết kế để nâng cao năng lực của bạn.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredCourses.map((course) => (
+            <CourseCard key={course.id} course={course} />
+          ))}
+        </div>
+        <div className="text-center mt-12">
+            <Button asChild size="lg" variant="outline">
+                <Link href="/courses">
+                    Xem Tất Cả Dịch Vụ <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+            </Button>
+        </div>
+      </section>
       
       {/* Meet Our Team Section */}
-       <section className="container py-20 md:py-24">
-        <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Gặp Gỡ Đội Ngũ Của Chúng Tôi</h2>
-            <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Các giảng viên và cố vấn của chúng tôi là những chuyên gia giàu kinh nghiệm, tận tâm vì sự thành công của bạn.
-            </p>
+       <section className="bg-card py-20 md:py-24">
+        <div className="container">
+          <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold">Gặp Gỡ Đội Ngũ Của Chúng Tôi</h2>
+              <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
+                Các giảng viên và cố vấn của chúng tôi là những chuyên gia giàu kinh nghiệm, tận tâm vì sự thành công của bạn.
+              </p>
+            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {employees.map((employee) => (
+              <EmployeeCard key={employee.name} employee={employee} />
+            ))}
           </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {employees.map((employee) => (
-            <EmployeeCard key={employee.name} employee={employee} />
-          ))}
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-card py-20 md:py-24">
+      <section className="py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Khách Hàng Nói Gì Về Chúng Tôi</h2>
@@ -161,7 +188,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
-              <Card key={testimonial.name} className="flex flex-col">
+              <Card key={testimonial.name} className="flex flex-col bg-card">
                 <CardContent className="p-6 flex-grow">
                   <div className="flex mb-2">
                     {[...Array(5)].map((_, i) => (
@@ -189,17 +216,19 @@ export default function Home() {
       </section>
 
       {/* Contact Us Section */}
-      <section className="container py-20 md:py-24 text-center">
-        <h2 className="text-3xl md:text-4xl font-headline font-bold">Sẵn Sàng Nâng Tầm Nhân Sự Của Bạn?</h2>
-        <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
-          Liên hệ với chúng tôi ngay hôm nay để tìm hiểu thêm về các khóa học, dịch vụ tư vấn và cách chúng tôi có thể giúp bạn đạt được mục tiêu nghề nghiệp.
-        </p>
-        <div className="mt-8">
-          <Button asChild size="lg">
-            <Link href="/contact">
-              Liên Hệ Ngay <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+      <section className="bg-card py-20 md:py-24 text-center">
+        <div className="container">
+          <h2 className="text-3xl md:text-4xl font-headline font-bold">Sẵn Sàng Nâng Tầm Nhân Sự Của Bạn?</h2>
+          <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
+            Liên hệ với chúng tôi ngay hôm nay để tìm hiểu thêm về các khóa học, dịch vụ tư vấn và cách chúng tôi có thể giúp bạn đạt được mục tiêu nghề nghiệp.
+          </p>
+          <div className="mt-8">
+            <Button asChild size="lg">
+              <Link href="/contact">
+                Liên Hệ Ngay <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
     </>
