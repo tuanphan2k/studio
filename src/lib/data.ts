@@ -68,6 +68,16 @@ export const courses: Course[] = [
     duration: '5 Tuần',
     level: 'Trung cấp',
   },
+  {
+    id: '5',
+    slug: 'ung-dung-ai-trong-quan-ly-nhan-su',
+    title: 'Ứng Dụng AI Trong Quản Lý Nhân Sự',
+    shortDescription: 'Khai phá sức mạnh của AI để tối ưu hóa quy trình và ra quyết định nhân sự thông minh.',
+    longDescription: `Trong kỷ nguyên số, Trí tuệ nhân tạo (AI) đang cách mạng hóa mọi lĩnh vực, và quản lý nhân sự cũng không ngoại lệ. Khóa học này sẽ trang bị cho bạn kiến thức và kỹ năng để ứng dụng AI một cách hiệu quả vào các hoạt động nhân sự hàng ngày. Chúng tôi sẽ khám phá cách AI có thể tự động hóa việc sàng lọc hồ sơ, phân tích cảm xúc của nhân viên, dự đoán xu hướng nghỉ việc và cá nhân hóa lộ trình đào tạo. Bạn sẽ học cách sử dụng các công cụ AI để đưa ra quyết định dựa trên dữ liệu, giảm thiểu sai lệch và nâng cao hiệu quả hoạt động của bộ phận nhân sự. Khóa học cũng thảo luận về các cân nhắc đạo đức và thách thức khi triển khai AI trong môi trường làm việc, giúp bạn trở thành một nhà lãnh đạo nhân sự có tư duy chiến lược và sẵn sàng cho tương lai.`,
+    thumbnail: 'https://placehold.co/600x400.png',
+    duration: '6 Tuần',
+    level: 'Nâng cao',
+  },
 ];
 
 
