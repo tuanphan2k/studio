@@ -9,40 +9,40 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 const benefits = [
   {
     icon: <Zap className="h-8 w-8 text-accent" />,
-    title: 'Cutting-Edge Curriculum',
-    description: 'Stay ahead with courses on the latest HR trends and technologies.',
+    title: 'Chương Trình Đào Tạo Tiên Tiến',
+    description: 'Luôn đi đầu với các khóa học về xu hướng và công nghệ nhân sự mới nhất.',
   },
   {
     icon: <Target className="h-8 w-8 text-accent" />,
-    title: 'Expert-Led Instruction & Advisory',
-    description: 'Learn from and partner with seasoned industry professionals with real-world experience.',
+    title: 'Giảng Dạy & Tư Vấn Bởi Chuyên Gia',
+    description: 'Học hỏi và hợp tác với các chuyên gia dày dạn kinh nghiệm trong ngành.',
   },
   {
     icon: <Users className="h-8 w-8 text-accent" />,
-    title: 'Career & Organizational Advancement',
-    description: 'Gain the skills and strategic insights needed to advance your career and organization.',
+    title: 'Phát Triển Sự Nghiệp & Tổ Chức',
+    description: 'Trang bị các kỹ năng và kiến thức chiến lược cần thiết để thăng tiến trong sự nghiệp và tổ chức của bạn.',
   },
 ];
 
 const employees = [
   {
-    name: 'Jane Doe',
-    title: 'Lead Instructor',
-    bio: 'Jane has over 15 years of experience in human resources and is passionate about teaching the next generation of HR leaders.',
+    name: 'Bà Lan',
+    title: 'Giảng Viên Chính',
+    bio: 'Bà Lan có hơn 15 năm kinh nghiệm trong lĩnh vực nhân sự và đam mê giảng dạy thế hệ lãnh đạo nhân sự tiếp theo.',
     image: 'https://placehold.co/400x400.png',
     hint: 'professional woman'
   },
   {
-    name: 'John Smith',
-    title: 'Career Coach',
-    bio: 'John specializes in career development and helps students navigate their career paths in the HR field.',
+    name: 'Ông Minh',
+    title: 'Cố Vấn Hướng Nghiệp',
+    bio: 'Ông Minh chuyên về phát triển sự nghiệp và giúp học viên định hướng con đường sự nghiệp trong lĩnh vực nhân sự.',
     image: 'https://placehold.co/400x400.png',
     hint: 'professional man'
   },
   {
-    name: 'Emily White',
-    title: 'Curriculum Developer',
-    bio: 'Emily designs our cutting-edge course content, ensuring it is relevant and impactful for our students.',
+    name: 'Cô Mai',
+    title: 'Chuyên Viên Phát Triển Chương Trình',
+    bio: 'Cô Mai thiết kế nội dung khóa học tiên tiến của chúng tôi, đảm bảo nội dung phù hợp và có tác động đến học viên.',
     image: 'https://placehold.co/400x400.png',
     hint: 'professional woman smiling'
   },
@@ -50,23 +50,23 @@ const employees = [
 
 const testimonials = [
   {
-    quote: "The 'Leadership in the Digital Age' course was a game-changer for my career. The insights were practical and immediately applicable.",
-    name: 'Sarah Johnson',
-    title: 'HR Manager',
+    quote: "Khóa học 'Lãnh đạo trong Kỷ nguyên số' đã thay đổi sự nghiệp của tôi. Những kiến thức rất thực tế và có thể áp dụng ngay lập tức.",
+    name: 'Chị An',
+    title: 'Trưởng phòng Nhân sự',
     avatar: 'https://placehold.co/100x100.png',
     hint: 'woman smiling',
   },
   {
-    quote: "As someone new to the field, the 'Foundations of HR' course provided the perfect grounding. I feel so much more confident in my role.",
-    name: 'Michael Chen',
-    title: 'HR Coordinator',
+    quote: "Là một người mới vào nghề, khóa học 'Nền tảng Nhân sự' đã cung cấp cho tôi một nền tảng hoàn hảo. Tôi cảm thấy tự tin hơn rất nhiều trong vai trò của mình.",
+    name: 'Anh Bảo',
+    title: 'Chuyên viên Nhân sự',
     avatar: 'https://placehold.co/100x100.png',
     hint: 'man portrait',
   },
   {
-    quote: "The quality of instruction and the supportive community at ElevateHR are top-notch. I highly recommend it to any HR professional.",
-    name: 'David Rodriguez',
-    title: 'Senior HR Business Partner',
+    quote: "Chất lượng giảng dạy và cộng đồng hỗ trợ tại ElevateHR thật tuyệt vời. Tôi rất khuyến khích bất kỳ chuyên gia nhân sự nào tham gia.",
+    name: 'Anh Khoa',
+    title: 'Đối tác Kinh doanh Nhân sự Cấp cao',
     avatar: 'https://placehold.co/100x100.png',
     hint: 'man professional',
   },
@@ -80,26 +80,26 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-headline font-extrabold tracking-tight text-primary">
-              Elevate Your HR Expertise
+              Nâng Tầm Chuyên Môn Nhân Sự
             </h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
-              Unlock your potential with expert-led training and advisory for the modern HR professional. Master new skills, drive organizational success, and advance your career.
+              Khai phá tiềm năng của bạn với chương trình đào tạo và tư vấn chuyên sâu cho chuyên gia nhân sự hiện đại. Nắm vững các kỹ năng mới, thúc đẩy thành công của tổ chức và thăng tiến trong sự nghiệp.
             </p>
             <div className="mt-8 flex gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link href="/courses">
-                  Explore Services <ArrowRight className="ml-2 h-5 w-5" />
+                  Khám Phá Dịch Vụ <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/about">Learn More</Link>
+                <Link href="/about">Tìm Hiểu Thêm</Link>
               </Button>
             </div>
           </div>
           <div>
             <Image
               src="https://placehold.co/600x500.png"
-              alt="HR professionals in a meeting"
+              alt="Các chuyên gia nhân sự trong một cuộc họp"
               width={600}
               height={500}
               className="rounded-lg shadow-2xl"
@@ -114,9 +114,9 @@ export default function Home() {
       <section className="bg-card py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Why Choose ElevateHR?</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Tại Sao Chọn ElevateHR?</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              We provide comprehensive solutions for training and strategic HR advisory.
+              Chúng tôi cung cấp các giải pháp toàn diện cho việc đào tạo và tư vấn nhân sự chiến lược.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -138,9 +138,9 @@ export default function Home() {
       {/* Meet Our Team Section */}
        <section className="container py-20 md:py-24">
         <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Meet Our Team</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Gặp Gỡ Đội Ngũ Của Chúng Tôi</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our instructors and advisors are experienced professionals dedicated to your success.
+              Các giảng viên và cố vấn của chúng tôi là những chuyên gia giàu kinh nghiệm, tận tâm vì sự thành công của bạn.
             </p>
           </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -154,9 +154,9 @@ export default function Home() {
       <section className="bg-card py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">What Our Clients Say</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Khách Hàng Nói Gì Về Chúng Tôi</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Hear from HR professionals who have advanced their careers and organizations with ElevateHR.
+              Lắng nghe chia sẻ từ các chuyên gia nhân sự đã thăng tiến trong sự nghiệp và phát triển tổ chức cùng ElevateHR.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -190,14 +190,14 @@ export default function Home() {
 
       {/* Contact Us Section */}
       <section className="container py-20 md:py-24 text-center">
-        <h2 className="text-3xl md:text-4xl font-headline font-bold">Ready to Elevate Your HR?</h2>
+        <h2 className="text-3xl md:text-4xl font-headline font-bold">Sẵn Sàng Nâng Tầm Nhân Sự Của Bạn?</h2>
         <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
-          Contact us today to learn more about our courses and advisory services, and how we can help you achieve your professional goals.
+          Liên hệ với chúng tôi ngay hôm nay để tìm hiểu thêm về các khóa học, dịch vụ tư vấn và cách chúng tôi có thể giúp bạn đạt được mục tiêu nghề nghiệp.
         </p>
         <div className="mt-8">
           <Button asChild size="lg">
             <Link href="/contact">
-              Get in Touch <ArrowRight className="ml-2 h-5 w-5" />
+              Liên Hệ Ngay <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
         </div>

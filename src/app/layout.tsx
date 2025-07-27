@@ -6,8 +6,8 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'ElevateHR - Professional HR Training',
-  description: 'Expert-led courses to elevate your HR skills and career.',
+  title: 'ElevateHR - Đào tạo nhân sự chuyên nghiệp',
+  description: 'Các khóa học do chuyên gia giảng dạy để nâng cao kỹ năng và sự nghiệp nhân sự của bạn.',
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="vi" className="h-full">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

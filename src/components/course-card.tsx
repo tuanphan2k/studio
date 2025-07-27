@@ -40,7 +40,7 @@ export function CourseCard({ course }: CourseCardProps) {
       <CardContent className="flex-grow flex items-end p-6 pt-0">
          <Button asChild className="w-full" variant="outline">
           <Link href={`/courses/${course.slug}`}>
-            View Details <ArrowRight className="ml-2 h-4 w-4" />
+            Xem Chi Tiết <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </CardContent>

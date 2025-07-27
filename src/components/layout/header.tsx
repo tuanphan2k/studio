@@ -12,10 +12,10 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/courses', label: 'Services' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', label: 'Trang Chủ' },
+  { href: '/courses', label: 'Dịch Vụ' },
+  { href: '/about', label: 'Về Chúng Tôi' },
+  { href: '/contact', label: 'Liên Hệ' },
 ];
 
 export function Header() {
@@ -52,7 +52,7 @@ export function Header() {
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon" className="md:hidden">
                   <Menu className="h-6 w-6" />
-                  <span className="sr-only">Toggle navigation menu</span>
+                  <span className="sr-only">Mở menu điều hướng</span>
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">

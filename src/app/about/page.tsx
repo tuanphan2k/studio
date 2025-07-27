@@ -6,17 +6,17 @@ export default function AboutPage() {
     <div className="container py-12 md:py-16">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">About ElevateHR</h1>
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Về ElevateHR</h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            Our mission is to empower HR professionals and organizational leaders with the knowledge and skills to build thriving workplaces of the future.
+            Sứ mệnh của chúng tôi là trang bị cho các chuyên gia nhân sự và các nhà lãnh đạo tổ chức những kiến thức và kỹ năng để xây dựng những nơi làm việc phát triển trong tương lai.
           </p>
           <Card className="mt-8">
             <CardHeader>
-              <CardTitle className="font-headline">Our Vision</CardTitle>
+              <CardTitle className="font-headline">Tầm Nhìn Của Chúng Tôi</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-foreground/90">
-                We believe that the heart of any successful organization is its people. By providing accessible, expert-led training, we aim to elevate the standards of human resources management, fostering environments where both individuals and businesses can achieve their full potential. We are committed to continuous innovation, ensuring our curriculum stays ahead of the curve in the ever-evolving world of work.
+                Chúng tôi tin rằng trái tim của bất kỳ tổ chức thành công nào chính là con người. Bằng cách cung cấp chương trình đào tạo chuyên sâu, dễ tiếp cận, chúng tôi mong muốn nâng cao tiêu chuẩn quản lý nguồn nhân lực, thúc đẩy môi trường nơi cả cá nhân và doanh nghiệp đều có thể phát huy hết tiềm năng của mình. Chúng tôi cam kết không ngừng đổi mới, đảm bảo chương trình giảng dạy của chúng tôi luôn đi trước đón đầu trong thế giới công việc không ngừng phát triển.
               </p>
             </CardContent>
           </Card>
@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div>
           <Image 
             src="https://placehold.co/600x700.png" 
-            alt="Office team collaborating"
+            alt="Đội ngũ văn phòng đang hợp tác"
             width={600}
             height={700}
             className="rounded-lg shadow-xl object-cover"

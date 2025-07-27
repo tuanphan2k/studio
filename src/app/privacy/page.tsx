@@ -5,43 +5,43 @@ export default function PrivacyPage() {
     <div className="container py-12 md:py-16">
       <Card>
         <CardHeader>
-          <CardTitle className="text-3xl md:text-4xl font-headline">Privacy Policy</CardTitle>
-          <p className="text-muted-foreground pt-2">Last updated: {new Date().toLocaleDateString()}</p>
+          <CardTitle className="text-3xl md:text-4xl font-headline">Chính Sách Bảo Mật</CardTitle>
+          <p className="text-muted-foreground pt-2">Cập nhật lần cuối: {new Date().toLocaleDateString('vi-VN')}</p>
         </CardHeader>
         <CardContent className="prose max-w-none dark:prose-invert">
-          <h2>1. Information We Collect</h2>
+          <h2>1. Thông Tin Chúng Tôi Thu Thập</h2>
           <p>
-            We collect information that you provide directly to us. For example, we collect information when you create an account, subscribe, participate in any interactive features of our services, fill out a form, request customer support, or otherwise communicate with us.
+            Chúng tôi thu thập thông tin bạn cung cấp trực tiếp cho chúng tôi. Ví dụ: chúng tôi thu thập thông tin khi bạn tạo tài khoản, đăng ký, tham gia vào bất kỳ tính năng tương tác nào của dịch vụ, điền vào biểu mẫu, yêu cầu hỗ trợ khách hàng hoặc liên lạc với chúng tôi.
           </p>
 
-          <h2>2. How We Use Your Information</h2>
+          <h2>2. Cách Chúng Tôi Sử Dụng Thông Tin Của Bạn</h2>
           <p>
-            We use the information we collect to provide, maintain, and improve our services. We may also use the information we collect to send you technical notices, updates, security alerts, and support and administrative messages.
+            Chúng tôi sử dụng thông tin thu thập được để cung cấp, duy trì và cải thiện dịch vụ của mình. Chúng tôi cũng có thể sử dụng thông tin thu thập được để gửi cho bạn các thông báo kỹ thuật, cập nhật, cảnh báo bảo mật, tin nhắn hỗ trợ và quản trị.
           </p>
 
-          <h2>3. Sharing of Information</h2>
+          <h2>3. Chia Sẻ Thông Tin</h2>
           <p>
-            We do not share your personal information with third parties except as described in this privacy policy. We may share information with vendors, consultants, and other service providers who need access to such information to carry out work on our behalf.
+            Chúng tôi không chia sẻ thông tin cá nhân của bạn với bên thứ ba trừ khi được mô tả trong chính sách bảo mật này. Chúng tôi có thể chia sẻ thông tin với các nhà cung cấp, chuyên gia tư vấn và các nhà cung cấp dịch vụ khác cần quyền truy cập vào thông tin đó để thực hiện công việc thay mặt chúng tôi.
           </p>
           
-          <h2>4. Data Security</h2>
+          <h2>4. Bảo Mật Dữ Liệu</h2>
           <p>
-            We take reasonable measures to help protect information about you from loss, theft, misuse and unauthorized access, disclosure, alteration, and destruction.
+            Chúng tôi thực hiện các biện pháp hợp lý để giúp bảo vệ thông tin về bạn khỏi mất mát, trộm cắp, lạm dụng và truy cập, tiết lộ, thay đổi và phá hủy trái phép.
           </p>
           
-          <h2>5. Your Choices</h2>
+          <h2>5. Lựa Chọn Của Bạn</h2>
           <p>
-            You may update, correct or delete information about you at any time by logging into your online account. If you wish to delete or deactivate your account, please email us, but note that we may retain certain information as required by law or for legitimate business purposes.
+            Bạn có thể cập nhật, sửa chữa hoặc xóa thông tin về bạn bất cứ lúc nào bằng cách đăng nhập vào tài khoản trực tuyến của mình. Nếu bạn muốn xóa hoặc hủy kích hoạt tài khoản của mình, vui lòng gửi email cho chúng tôi, nhưng lưu ý rằng chúng tôi có thể giữ lại một số thông tin theo yêu cầu của pháp luật hoặc cho các mục đích kinh doanh hợp pháp.
           </p>
 
-          <h2>6. Cookies</h2>
+          <h2>6. Cookie</h2>
           <p>
-            We use cookies to improve and customize our services and your experience. You can set your browser to not accept cookies, but this may limit your ability to use the services.
+            Chúng tôi sử dụng cookie để cải thiện và tùy chỉnh các dịch vụ và trải nghiệm của bạn. Bạn có thể cài đặt trình duyệt của mình không chấp nhận cookie, nhưng điều này có thể hạn chế khả năng sử dụng dịch vụ của bạn.
           </p>
 
-          <h2>7. Changes to This Policy</h2>
+          <h2>7. Thay Đổi Chính Sách Này</h2>
           <p>
-            We may change this Privacy Policy from time to time. If we make changes, we will notify you by revising the date at the top of the policy and, in some cases, we may provide you with additional notice.
+            Chúng tôi có thể thay đổi Chính sách Bảo mật này theo thời gian. Nếu chúng tôi thực hiện thay đổi, chúng tôi sẽ thông báo cho bạn bằng cách sửa đổi ngày ở đầu chính sách và trong một số trường hợp, chúng tôi có thể cung cấp cho bạn thông báo bổ sung.
           </p>
         </CardContent>
       </Card>

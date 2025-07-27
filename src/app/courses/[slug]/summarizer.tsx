@@ -20,12 +20,12 @@ function SubmitButton() {
       {pending ? (
         <>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Generating...
+          Đang tạo...
         </>
       ) : (
         <>
           <Sparkles className="mr-2 h-4 w-4" />
-          Generate Executive Summary
+          Tạo Tóm Tắt
         </>
       )}
     </Button>
@@ -41,7 +41,7 @@ export function Summarizer({ content }: SummarizerProps) {
     if (state.error) {
       toast({
         variant: 'destructive',
-        title: 'Error',
+        title: 'Lỗi',
         description: state.error,
       });
     }
@@ -52,7 +52,7 @@ export function Summarizer({ content }: SummarizerProps) {
       <CardHeader>
         <CardTitle className="font-headline text-accent flex items-center gap-2">
           <Sparkles />
-          AI-Powered Summary
+          Tóm Tắt Bằng AI
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -63,7 +63,7 @@ export function Summarizer({ content }: SummarizerProps) {
         {state.summary && (
           <Alert className="mt-6 bg-background">
             <Sparkles className="h-4 w-4" />
-            <AlertTitle className="font-headline">Executive Summary</AlertTitle>
+            <AlertTitle className="font-headline">Tóm Tắt</AlertTitle>
             <AlertDescription className="mt-2 prose prose-sm max-w-none">
               {state.summary}
             </AlertDescription>

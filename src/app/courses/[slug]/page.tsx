@@ -53,7 +53,7 @@ export default function CourseDetailPage({ params }: CourseDetailPageProps) {
               <CardContent className="p-6">
                 <h2 className="font-headline text-2xl mb-4 flex items-center gap-3">
                   <BookOpen className="text-accent" />
-                  Course Content
+                  Nội Dung Khóa Học
                 </h2>
                 <Separator className='mb-4'/>
                 <p className="text-foreground/90 whitespace-pre-line leading-relaxed">
