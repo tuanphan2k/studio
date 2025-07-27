@@ -26,9 +26,9 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="container flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Nhân Tâm Phát Logo" width={40} height={40} />
+          <Image src="/logo.png" alt="ElevateHR Logo" width={40} height={40} />
           <span className="text-2xl font-bold font-headline text-foreground">
-            Nhân Tâm Phát
+            ElevateHR
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-base font-medium">
@@ -59,9 +59,9 @@ export function Header() {
               <SheetContent side="right">
                 <div className="grid gap-6 p-6">
                   <Link href="/" className="flex items-center gap-2 mb-4">
-                     <Image src="/logo.png" alt="Nhân Tâm Phát Logo" width={36} height={36} />
+                     <Image src="/logo.png" alt="ElevateHR Logo" width={36} height={36} />
                     <span className="text-xl font-bold font-headline text-foreground">
-                      Nhân Tâm Phát
+                      ElevateHR
                     </span>
                   </Link>
                   <nav className="grid gap-4">
