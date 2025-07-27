@@ -10,9 +10,7 @@ export const metadata: Metadata = {
   description: 'Khám phá các khóa học đào tạo nhân sự chuyên sâu và dịch vụ tư vấn doanh nghiệp chiến lược tại Nhân Tâm Phát, được thiết kế cho sự phát triển của bạn.',
 };
 
-export default function ServicesPage({ searchParams }: { searchParams?: { tab?: string }}) {
-  const tab = searchParams?.tab === 'consulting' ? 'consulting' : 'training';
-
+export default function ServicesPage() {
   return (
     <div className="container py-12 md:py-16">
       <div className="text-center mb-12">
@@ -23,7 +21,6 @@ export default function ServicesPage({ searchParams }: { searchParams?: { tab?: 
       </div>
 
       <ServicesTabs 
-        initialTab={tab} 
         courses={courses} 
         consultingServices={consultingServices} 
       />

@@ -1,23 +1,26 @@
 'use client';
 
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CourseCard } from '@/components/course-card';
 import { ConsultingServiceCard } from '@/components/consulting-service-card';
 import type { Course, ConsultingService } from '@/lib/data';
 
 type ServicesTabsProps = {
-  initialTab: 'training' | 'consulting';
   courses: Course[];
   consultingServices: ConsultingService[];
 }
 
-export function ServicesTabs({ initialTab, courses, consultingServices }: ServicesTabsProps) {
+export function ServicesTabs({ courses, consultingServices }: ServicesTabsProps) {
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const initialTab = searchParams.get('tab') === 'consulting' ? 'consulting' : 'training';
 
   const handleTabChange = (value: string) => {
-    router.push(`${pathname}?tab=${value}`, { scroll: false });
+    const params = new URLSearchParams(searchParams.toString())
+    params.set('tab', value)
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
   };
   
   return (
