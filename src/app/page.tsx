@@ -105,7 +105,7 @@ export default function Home() {
       <section className="container py-20 md:py-32">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-headline font-extrabold tracking-tight text-primary">
+            <h1 className="text-4xl md:text-6xl font-headline font-extrabold text-primary">
               Nâng Tầm Nhân Sự, Vững Bước Doanh Nghiệp
             </h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
