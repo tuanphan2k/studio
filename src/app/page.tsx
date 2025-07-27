@@ -127,7 +127,6 @@ export default function Home() {
               <Image
                 src="https://placehold.co/600x500.png"
                 alt="Các chuyên gia nhân sự trong một cuộc họp"
-                width={600}
                 height={500}
                 className="rounded-lg shadow-2xl w-full h-auto object-cover"
                 priority

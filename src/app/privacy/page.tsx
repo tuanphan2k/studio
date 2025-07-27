@@ -6,7 +6,7 @@ export default function PrivacyPage() {
       <Card>
         <CardHeader>
           <CardTitle className="text-3xl md:text-4xl font-headline">Chính Sách Bảo Mật</CardTitle>
-          <p className="text-muted-foreground pt-2">Cập nhật lần cuối: {new Date().toLocaleDateString('vi-VN')}</p>
+          <p className="text-muted-foreground pt-2">Cập nhật lần cuối: 14/07/2024</p>
         </CardHeader>
         <CardContent className="prose max-w-none dark:prose-invert">
           <h2>1. Thông Tin Chúng Tôi Thu Thập</h2>
