@@ -102,36 +102,38 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="container py-20 md:py-32 overflow-x-hidden">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-headline font-extrabold text-primary">
-              Nâng Tầm Nhân Sự, Vững Bước Doanh Nghiệp
-            </h1>
-            <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
-              Khai phá tiềm năng đội ngũ của bạn với các chương trình đào tạo và dịch vụ tư vấn nhân sự chuyên sâu.
-            </p>
-            <div className="mt-8 flex gap-4 justify-center md:justify-start">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link href="/courses">
-                  Khám Phá Dịch Vụ <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="/about">Tìm Hiểu Thêm</Link>
-              </Button>
+      <section className="py-20 md:py-32 overflow-x-hidden">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl md:text-6xl font-headline font-extrabold text-primary">
+                Nâng Tầm Nhân Sự, Vững Bước Doanh Nghiệp
+              </h1>
+              <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
+                Khai phá tiềm năng đội ngũ của bạn với các chương trình đào tạo và dịch vụ tư vấn nhân sự chuyên sâu.
+              </p>
+              <div className="mt-8 flex gap-4 justify-center md:justify-start">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                  <Link href="/courses">
+                    Khám Phá Dịch Vụ <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link href="/about">Tìm Hiểu Thêm</Link>
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className="w-full">
-            <Image
-              src="https://placehold.co/600x500.png"
-              alt="Các chuyên gia nhân sự trong một cuộc họp"
-              width={600}
-              height={500}
-              className="rounded-lg shadow-2xl w-full h-auto object-cover"
-              priority
-              data-ai-hint="team meeting"
-            />
+            <div className="w-full">
+              <Image
+                src="https://placehold.co/600x500.png"
+                alt="Các chuyên gia nhân sự trong một cuộc họp"
+                width={600}
+                height={500}
+                className="rounded-lg shadow-2xl w-full h-auto object-cover"
+                priority
+                data-ai-hint="team meeting"
+              />
+            </div>
           </div>
         </div>
       </section>
