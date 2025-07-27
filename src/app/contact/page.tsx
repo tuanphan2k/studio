@@ -6,6 +6,12 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Liên Hệ - Nhân Tâm Phát",
+  description: "Liên hệ với Nhân Tâm Phát để được tư vấn về các khóa học nhân sự, giải pháp doanh nghiệp hoặc bất kỳ câu hỏi nào khác. Chúng tôi luôn sẵn sàng hỗ trợ.",
+};
 
 
 export default function ContactPage() {

@@ -5,6 +5,12 @@ import { employees } from '@/lib/data';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Target, BrainCircuit, HeartHandshake } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Về Chúng Tôi - Nhân Tâm Phát",
+  description: "Tìm hiểu về sứ mệnh, tầm nhìn và đội ngũ chuyên gia của Nhân Tâm Phát. Chúng tôi cam kết nâng cao năng lực cho ngành nhân sự Việt Nam.",
+};
 
 const coreValues = [
   {

@@ -5,12 +5,33 @@ import { Clock, BarChart, BookOpen } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Summarizer } from './summarizer';
 import { Separator } from '@/components/ui/separator';
+import type { Metadata, ResolvingMetadata } from 'next';
 
 type CourseDetailPageProps = {
   params: {
     slug: string;
   };
 };
+
+export async function generateMetadata(
+  { params }: CourseDetailPageProps,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const course = courses.find((c) => c.slug === params.slug);
+
+  if (!course) {
+    return {
+      title: 'Không Tìm Thấy Khóa Học',
+      description: 'Khóa học bạn đang tìm kiếm không tồn tại hoặc đã bị di chuyển.',
+    };
+  }
+
+  return {
+    title: `${course.title} - Nhân Tâm Phát`,
+    description: course.shortDescription,
+  };
+}
+
 
 export default function CourseDetailPage({ params }: CourseDetailPageProps) {
   const course = courses.find((c) => c.slug === params.slug);

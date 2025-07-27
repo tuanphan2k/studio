@@ -8,6 +8,12 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Khóa Học & Dịch Vụ - Nhân Tâm Phát',
+  description: 'Khám phá các khóa học đào tạo nhân sự chuyên sâu và dịch vụ tư vấn doanh nghiệp chiến lược tại Nhân Tâm Phát, được thiết kế cho sự phát triển của bạn.',
+};
 
 export default function ServicesPage() {
   const router = useRouter();
