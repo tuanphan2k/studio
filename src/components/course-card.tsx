@@ -14,14 +14,16 @@ export function CourseCard({ course }: CourseCardProps) {
   return (
     <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       <CardHeader className="p-0">
-        <Image
-          src={course.thumbnail}
-          alt={course.title}
-          width={600}
-          height={400}
-          className="aspect-video w-full object-cover"
-          data-ai-hint="course concepts"
-        />
+        <div className="aspect-video w-full overflow-hidden">
+          <Image
+            src={course.thumbnail}
+            alt={course.title}
+            width={600}
+            height={400}
+            className="w-full h-full object-cover"
+            data-ai-hint="course concepts"
+          />
+        </div>
         <div className="p-6">
           <CardTitle className="font-headline text-2xl mb-2">{course.title}</CardTitle>
           <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
