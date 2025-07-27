@@ -57,7 +57,7 @@ export default function AboutPage() {
         <div className="container text-center max-w-4xl mx-auto">
            <h2 className="text-3xl md:text-4xl font-headline font-bold">Tầm Nhìn Của Chúng Tôi</h2>
            <p className="mt-4 text-lg text-muted-foreground">
-            Chúng tôi tin rằng trái tim của bất kỳ tổ chức thành công nào chính là con người. Bằng cách cung cấp các chương trình đào tạo chuyên sâu và dịch vụ tư vấn chiến lược, chúng tôi mong muốn nâng cao tiêu chuẩn quản lý nguồn nhân lực, thúc đẩy môi trường nơi cả cá nhân và doanh nghiệp đều có thể phát huy hết tiềm năng của mình. Chúng tôi cam kết không ngừng đổi mới, đảm bảo các giải pháp của chúng tôi luôn đi trước đón đầu trong thế giới công việc không ngừng phát triển.
+            Chúng tôi tin rằng trái tim của bất kỳ tổ chức thành công nào chính là con người. Bằng cách cung cấp các chương trình đào tạo chuyên sâu và dịch vụ tư vấn chiến lược, chúng tôi mong muốn nâng cao tiêu chuẩn quản lý nguồn nhân lực, thúc đẩy môi trường nơi cả cá nhân và doanh nghiệp đều có thể phát huy hết tiềm năng của mình. Chúng tôi cam kết không ngừng đổi mới, tích hợp các công nghệ tiên tiến như AI để đảm bảo các giải pháp của chúng tôi luôn đi trước đón đầu trong thế giới công việc không ngừng phát triển.
           </p>
         </div>
       </section>

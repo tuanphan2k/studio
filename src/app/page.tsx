@@ -18,8 +18,8 @@ import {
 const benefits = [
   {
     icon: <Zap className="h-8 w-8 text-accent" />,
-    title: 'Đào Tạo & Tư Vấn Chuyên Sâu',
-    description: 'Luôn đi đầu với các khóa học và dịch vụ tư vấn về xu hướng và công nghệ nhân sự mới nhất.',
+    title: 'Đào Tạo Hiện Đại & Tích Hợp AI',
+    description: 'Tiên phong với các khóa học và công cụ AI, mang đến trải nghiệm học tập và tư vấn hiệu quả nhất.',
   },
   {
     icon: <Target className="h-8 w-8 text-accent" />,
