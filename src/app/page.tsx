@@ -11,40 +11,40 @@ import { CourseCard } from '@/components/course-card';
 const benefits = [
   {
     icon: <Zap className="h-8 w-8 text-accent" />,
-    title: 'Chương Trình Đào Tạo Tiên Tiến',
-    description: 'Luôn đi đầu với các khóa học về xu hướng và công nghệ nhân sự mới nhất.',
+    title: 'Đào Tạo & Tư Vấn Chuyên Sâu',
+    description: 'Luôn đi đầu với các khóa học và dịch vụ tư vấn về xu hướng và công nghệ nhân sự mới nhất.',
   },
   {
     icon: <Target className="h-8 w-8 text-accent" />,
-    title: 'Giảng Dạy Bởi Chuyên Gia',
-    description: 'Học hỏi từ các chuyên gia nhân sự dày dạn kinh nghiệm trong ngành.',
+    title: 'Giảng Dạy & Tư Vấn Bởi Chuyên Gia',
+    description: 'Học hỏi và nhận tư vấn từ các chuyên gia nhân sự dày dạn kinh nghiệm trong ngành.',
   },
   {
     icon: <Users className="h-8 w-8 text-accent" />,
-    title: 'Phát Triển Sự Nghiệp',
-    description: 'Trang bị các kỹ năng cần thiết để thăng tiến trong sự nghiệp nhân sự của bạn.',
+    title: 'Phát Triển Năng Lực Tổ Chức',
+    description: 'Trang bị các kỹ năng và chiến lược cần thiết để phát triển đội ngũ và doanh nghiệp của bạn.',
   },
 ];
 
 const employees = [
   {
     name: 'Bà Lan',
-    title: 'Giảng Viên Chính',
-    bio: 'Bà Lan có hơn 15 năm kinh nghiệm trong lĩnh vực nhân sự và đam mê giảng dạy thế hệ lãnh đạo nhân sự tiếp theo.',
+    title: 'Giảng Viên & Chuyên Gia Tư Vấn Chính',
+    bio: 'Bà Lan có hơn 15 năm kinh nghiệm trong lĩnh vực nhân sự, chuyên đào tạo và tư vấn cho các doanh nghiệp.',
     image: 'https://placehold.co/400x400.png',
     hint: 'professional woman'
   },
   {
     name: 'Ông Minh',
-    title: 'Cố Vấn Hướng Nghiệp',
-    bio: 'Ông Minh chuyên về phát triển sự nghiệp và giúp học viên định hướng con đường sự nghiệp trong lĩnh vực nhân sự.',
+    title: 'Cố Vấn Hướng Nghiệp & Doanh Nghiệp',
+    bio: 'Ông Minh chuyên về phát triển sự nghiệp và tư vấn chiến lược nhân sự cho các tổ chức.',
     image: 'https://placehold.co/400x400.png',
     hint: 'professional man'
   },
   {
     name: 'Cô Mai',
     title: 'Chuyên Viên Phát Triển Chương Trình',
-    bio: 'Cô Mai thiết kế nội dung khóa học tiên tiến của chúng tôi, đảm bảo nội dung phù hợp và có tác động đến học viên.',
+    bio: 'Cô Mai thiết kế nội dung khóa học và các giải pháp tư vấn phù hợp và có tác động đến học viên và doanh nghiệp.',
     image: 'https://placehold.co/400x400.png',
     hint: 'professional woman smiling'
   },
@@ -52,9 +52,9 @@ const employees = [
 
 const testimonials = [
   {
-    quote: "Khóa học 'Lãnh đạo trong Kỷ nguyên số' đã thay đổi sự nghiệp của tôi. Những kiến thức rất thực tế và có thể áp dụng ngay lập tức.",
+    quote: "Dịch vụ tư vấn của Nhân Tâm Phát đã giúp chúng tôi cải tổ lại toàn bộ hệ thống nhân sự. Rất chuyên nghiệp và hiệu quả.",
     name: 'Chị An',
-    title: 'Trưởng phòng Nhân sự',
+    title: 'CEO, Công ty ABC',
     avatar: 'https://placehold.co/100x100.png',
     hint: 'woman smiling',
   },
@@ -66,7 +66,7 @@ const testimonials = [
     hint: 'man portrait',
   },
   {
-    quote: "Chất lượng giảng dạy và cộng đồng hỗ trợ tại Nhân Tâm Phát thật tuyệt vời. Tôi rất khuyến khích bất kỳ chuyên gia nhân sự nào tham gia.",
+    quote: "Chất lượng giảng dạy và sự hỗ trợ từ các chuyên gia tư vấn tại Nhân Tâm Phát thật tuyệt vời. Tôi rất khuyến khích các chuyên gia và doanh nghiệp tham gia.",
     name: 'Anh Khoa',
     title: 'Đối tác Kinh doanh Nhân sự Cấp cao',
     avatar: 'https://placehold.co/100x100.png',
@@ -83,15 +83,15 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-headline font-extrabold tracking-tight text-primary">
-              Nâng Tầm Sự Nghiệp Nhân Sự Của Bạn
+              Nâng Tầm Nhân Sự, Vững Bước Doanh Nghiệp
             </h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
-              Khai phá tiềm năng của bạn với các chương trình đào tạo chuyên sâu dành cho các chuyên gia nhân sự hiện đại.
+              Khai phá tiềm năng đội ngũ của bạn với các chương trình đào tạo và dịch vụ tư vấn nhân sự chuyên sâu.
             </p>
             <div className="mt-8 flex gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link href="/courses">
-                  Khám Phá Khóa Học <ArrowRight className="ml-2 h-5 w-5" />
+                  Khám Phá Dịch Vụ <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
@@ -119,7 +119,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Tại Sao Chọn Nhân Tâm Phát?</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Chúng tôi cung cấp các giải pháp toàn diện cho việc đào tạo và phát triển nhân sự chiến lược.
+              Chúng tôi cung cấp các giải pháp toàn diện cho việc đào tạo và tư vấn nhân sự chiến lược.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -141,9 +141,9 @@ export default function Home() {
       {/* Featured Services Section */}
       <section className="container py-20 md:py-24">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Học Nổi Bật</h2>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Học & Dịch Vụ Nổi Bật</h2>
           <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Khám phá các khóa học hàng đầu được thiết kế để nâng cao năng lực chuyên môn của bạn.
+            Khám phá các khóa học và dịch vụ tư vấn hàng đầu được thiết kế để nâng cao năng lực cho cá nhân và tổ chức.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -154,7 +154,7 @@ export default function Home() {
         <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline">
                 <Link href="/courses">
-                    Xem Tất Cả Khóa Học <ArrowRight className="ml-2 h-4 w-4" />
+                    Xem Tất Cả Dịch Vụ <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
             </Button>
         </div>
@@ -164,9 +164,9 @@ export default function Home() {
        <section className="bg-card py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold">Gặp Gỡ Đội Ngũ Của Chúng Tôi</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold">Gặp Gỡ Đội Ngũ Chuyên Gia</h2>
               <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Các giảng viên của chúng tôi là những chuyên gia giàu kinh nghiệm trong ngành, tận tâm vì sự thành công của bạn.
+                Các giảng viên và chuyên gia tư vấn của chúng tôi là những người giàu kinh nghiệm, tận tâm vì sự thành công của bạn.
               </p>
             </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -181,9 +181,9 @@ export default function Home() {
       <section className="py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Học Viên Nói Gì Về Chúng Tôi</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Khách Hàng & Học Viên Nói Gì?</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Lắng nghe chia sẻ từ các chuyên gia nhân sự đã thăng tiến trong sự nghiệp cùng Nhân Tâm Phát.
+              Lắng nghe chia sẻ từ các doanh nghiệp và chuyên gia đã phát triển cùng Nhân Tâm Phát.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -218,9 +218,9 @@ export default function Home() {
       {/* Contact Us Section */}
       <section className="bg-primary/5 py-20 md:py-24 text-center">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">Sẵn Sàng Nâng Tầm Sự Nghiệp Nhân Sự Của Bạn?</h2>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold">Sẵn Sàng Cho Sự Phát Triển?</h2>
           <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
-            Liên hệ với chúng tôi ngay hôm nay để tìm hiểu thêm về các khóa học của chúng tôi và cách chúng tôi có thể giúp bạn đạt được mục tiêu nghề nghiệp của mình.
+            Liên hệ với chúng tôi ngay hôm nay để tìm hiểu thêm về các khóa học và dịch vụ tư vấn, giúp bạn đạt được mục tiêu của mình.
           </p>
           <div className="mt-8">
             <Button asChild size="lg">
