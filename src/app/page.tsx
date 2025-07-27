@@ -14,13 +14,13 @@ const benefits = [
   },
   {
     icon: <Target className="h-8 w-8 text-accent" />,
-    title: 'Expert-Led Instruction',
-    description: 'Learn from seasoned industry professionals with real-world experience.',
+    title: 'Expert-Led Instruction & Advisory',
+    description: 'Learn from and partner with seasoned industry professionals with real-world experience.',
   },
   {
     icon: <Users className="h-8 w-8 text-accent" />,
-    title: 'Career Advancement',
-    description: 'Gain the skills and credentials needed to advance your HR career.',
+    title: 'Career & Organizational Advancement',
+    description: 'Gain the skills and strategic insights needed to advance your career and organization.',
   },
 ];
 
@@ -83,12 +83,12 @@ export default function Home() {
               Elevate Your HR Expertise
             </h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
-              Unlock your potential with expert-led courses designed for the modern HR professional. Master new skills, drive organizational success, and advance your career.
+              Unlock your potential with expert-led training and advisory for the modern HR professional. Master new skills, drive organizational success, and advance your career.
             </p>
             <div className="mt-8 flex gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link href="/courses">
-                  Explore Courses <ArrowRight className="ml-2 h-5 w-5" />
+                  Explore Services <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
@@ -116,7 +116,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Why Choose ElevateHR?</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              We provide a comprehensive learning experience tailored for success.
+              We provide comprehensive solutions for training and strategic HR advisory.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -140,7 +140,7 @@ export default function Home() {
         <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Meet Our Team</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our instructors are experienced professionals dedicated to your success.
+              Our instructors and advisors are experienced professionals dedicated to your success.
             </p>
           </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -154,9 +154,9 @@ export default function Home() {
       <section className="bg-card py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">What Our Students Say</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">What Our Clients Say</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Hear from HR professionals who have advanced their careers with ElevateHR.
+              Hear from HR professionals who have advanced their careers and organizations with ElevateHR.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

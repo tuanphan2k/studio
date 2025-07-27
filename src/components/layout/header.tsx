@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/courses', label: 'Courses' },
+  { href: '/courses', label: 'Services' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -48,12 +48,6 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-           <Button asChild variant="ghost" className='hidden md:flex'>
-             <Link href="/login">Sign In</Link>
-           </Button>
-           <Button asChild className='hidden md:flex'>
-             <Link href="/signup">Sign Up</Link>
-           </Button>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="outline" size="icon" className="md:hidden">
@@ -83,14 +77,6 @@ export function Header() {
                       </Link>
                     ))}
                   </nav>
-                   <div className="mt-6 flex flex-col gap-4">
-                      <Button asChild>
-                        <Link href="/login">Sign In</Link>
-                      </Button>
-                      <Button asChild variant="outline">
-                        <Link href="/signup">Sign Up</Link>
-                      </Button>
-                    </div>
                 </div>
               </SheetContent>
             </Sheet>
