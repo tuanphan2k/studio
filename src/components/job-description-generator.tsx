@@ -49,7 +49,7 @@ export function JobDescriptionGenerator() {
   const renderPreview = (text: string) => {
     // Split by sections. A section starts with ## or ###
     const sections = text.split(/(?=## |### )/);
-    const previewText = sections.slice(0, 1).join('\n'); // Show first section only
+    const previewText = sections.slice(0, 2).join('\n');
 
     const html = previewText
       .replace(/(\*\*|__)(.*?)\1/g, '<strong>$2</strong>') // Bold
