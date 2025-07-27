@@ -16,13 +16,13 @@ const benefits = [
   },
   {
     icon: <Target className="h-8 w-8 text-accent" />,
-    title: 'Giảng Dạy & Tư Vấn Bởi Chuyên Gia',
-    description: 'Học hỏi và hợp tác với các chuyên gia dày dạn kinh nghiệm trong ngành.',
+    title: 'Giảng Dạy Bởi Chuyên Gia',
+    description: 'Học hỏi từ các chuyên gia nhân sự dày dạn kinh nghiệm trong ngành.',
   },
   {
     icon: <Users className="h-8 w-8 text-accent" />,
-    title: 'Phát Triển Sự Nghiệp & Tổ Chức',
-    description: 'Trang bị các kỹ năng và kiến thức chiến lược cần thiết để thăng tiến trong sự nghiệp và tổ chức của bạn.',
+    title: 'Phát Triển Sự Nghiệp',
+    description: 'Trang bị các kỹ năng cần thiết để thăng tiến trong sự nghiệp nhân sự của bạn.',
   },
 ];
 
@@ -83,15 +83,15 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-headline font-extrabold tracking-tight text-primary">
-              Nâng Tầm Nhân Sự và Tổ Chức
+              Nâng Tầm Sự Nghiệp Nhân Sự Của Bạn
             </h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0">
-              Khai phá tiềm năng của bạn với các chương trình đào tạo và tư vấn chuyên sâu dành cho các chuyên gia nhân sự và lãnh đạo doanh nghiệp hiện đại.
+              Khai phá tiềm năng của bạn với các chương trình đào tạo chuyên sâu dành cho các chuyên gia nhân sự hiện đại.
             </p>
             <div className="mt-8 flex gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link href="/courses">
-                  Khám Phá Dịch Vụ <ArrowRight className="ml-2 h-5 w-5" />
+                  Khám Phá Khóa Học <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
@@ -119,7 +119,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Tại Sao Chọn Nhân Tâm Phát?</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Chúng tôi cung cấp các giải pháp toàn diện cho việc đào tạo và tư vấn nhân sự chiến lược.
+              Chúng tôi cung cấp các giải pháp toàn diện cho việc đào tạo và phát triển nhân sự chiến lược.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -141,9 +141,9 @@ export default function Home() {
       {/* Featured Services Section */}
       <section className="container py-20 md:py-24">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">Dịch Vụ Nổi Bật Của Chúng Tôi</h2>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Học Nổi Bật</h2>
           <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Khám phá các khóa học và dịch vụ tư vấn hàng đầu được thiết kế để nâng cao năng lực của bạn.
+            Khám phá các khóa học hàng đầu được thiết kế để nâng cao năng lực chuyên môn của bạn.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -154,7 +154,7 @@ export default function Home() {
         <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline">
                 <Link href="/courses">
-                    Xem Tất Cả Dịch Vụ <ArrowRight className="ml-2 h-4 w-4" />
+                    Xem Tất Cả Khóa Học <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
             </Button>
         </div>
@@ -166,7 +166,7 @@ export default function Home() {
           <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-headline font-bold">Gặp Gỡ Đội Ngũ Của Chúng Tôi</h2>
               <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Các giảng viên và cố vấn của chúng tôi là những chuyên gia giàu kinh nghiệm, tận tâm vì sự thành công của bạn.
+                Các giảng viên của chúng tôi là những chuyên gia giàu kinh nghiệm trong ngành, tận tâm vì sự thành công của bạn.
               </p>
             </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -181,9 +181,9 @@ export default function Home() {
       <section className="py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Khách Hàng Nói Gì Về Chúng Tôi</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Học Viên Nói Gì Về Chúng Tôi</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Lắng nghe chia sẻ từ các chuyên gia nhân sự đã thăng tiến trong sự nghiệp và phát triển tổ chức cùng Nhân Tâm Phát.
+              Lắng nghe chia sẻ từ các chuyên gia nhân sự đã thăng tiến trong sự nghiệp cùng Nhân Tâm Phát.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -216,11 +216,11 @@ export default function Home() {
       </section>
 
       {/* Contact Us Section */}
-      <section className="bg-card py-20 md:py-24 text-center">
+      <section className="bg-primary/5 py-20 md:py-24 text-center">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold">Sẵn Sàng Nâng Tầm Tổ Chức Của Bạn?</h2>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold">Sẵn Sàng Nâng Tầm Sự Nghiệp Nhân Sự Của Bạn?</h2>
           <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
-            Liên hệ với chúng tôi ngay hôm nay để tìm hiểu thêm về các khóa học, dịch vụ tư vấn và cách chúng tôi có thể giúp bạn đạt được mục tiêu của mình.
+            Liên hệ với chúng tôi ngay hôm nay để tìm hiểu thêm về các khóa học của chúng tôi và cách chúng tôi có thể giúp bạn đạt được mục tiêu nghề nghiệp của mình.
           </p>
           <div className="mt-8">
             <Button asChild size="lg">

@@ -8,7 +8,7 @@ export default function AboutPage() {
         <div>
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Về Nhân Tâm Phát</h1>
           <p className="mt-4 text-lg text-muted-foreground">
-            Sứ mệnh của chúng tôi là trang bị cho các chuyên gia nhân sự và các nhà lãnh đạo tổ chức những kiến thức và kỹ năng để xây dựng những nơi làm việc phát triển trong tương lai.
+            Sứ mệnh của chúng tôi là trang bị cho các chuyên gia nhân sự những kiến thức và kỹ năng để xây dựng những nơi làm việc phát triển trong tương lai.
           </p>
           <Card className="mt-8">
             <CardHeader>
