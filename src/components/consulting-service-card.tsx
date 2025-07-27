@@ -16,7 +16,9 @@ export function ConsultingServiceCard({ service }: ConsultingServiceCardProps) {
         <div className="p-4 bg-accent/10 rounded-full text-accent mb-4">
           <Icon className="h-10 w-10" />
         </div>
-        <CardTitle className="font-headline text-2xl">{service.title}</CardTitle>
+        <CardTitle asChild>
+          <h2 className="font-headline text-2xl">{service.title}</h2>
+        </CardTitle>
       </CardHeader>
       <CardContent className="flex-grow flex flex-col justify-between">
         <CardDescription className="mb-6">{service.shortDescription}</CardDescription>
