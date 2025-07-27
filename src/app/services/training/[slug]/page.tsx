@@ -2,11 +2,13 @@
 import { notFound } from 'next/navigation';
 import { courses } from '@/lib/data';
 import Image from 'next/image';
-import { Clock, BarChart, BookOpen } from 'lucide-react';
+import { Clock, BarChart, BookOpen, ArrowLeft } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Summarizer } from './summarizer';
 import { Separator } from '@/components/ui/separator';
 import type { Metadata, ResolvingMetadata } from 'next';
+import Link from 'next/link';
+import { Breadcrumb } from '@/components/breadcrumb';
 
 type CourseDetailPageProps = {
   params: {
@@ -47,7 +49,13 @@ export default function CourseDetailPage({ params }: CourseDetailPageProps) {
         <div className="lg:col-span-2">
           <article className="prose prose-lg max-w-none dark:prose-invert">
             <div className="mb-8">
-              <h1 className="font-headline text-4xl md:text-5xl mb-4 text-primary">
+              <Breadcrumb
+                items={[
+                  { label: 'Các Khóa Đào Tạo', href: '/services/training' },
+                  { label: course.title, href: `/services/training/${course.slug}` },
+                ]}
+              />
+              <h1 className="font-headline text-4xl md:text-5xl !mt-4 !mb-4 text-primary">
                 {course.title}
               </h1>
               <div className="flex items-center gap-6 text-base text-muted-foreground">

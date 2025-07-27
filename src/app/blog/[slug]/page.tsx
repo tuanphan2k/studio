@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BlogCard } from '@/components/blog-card';
+import { Breadcrumb } from '@/components/breadcrumb';
 
 type PostPageProps = {
   params: {
@@ -53,16 +54,18 @@ export default function PostPage({ params }: PostPageProps) {
       <div className="max-w-4xl mx-auto">
         <article className="prose prose-lg max-w-none dark:prose-invert">
             <div className="mb-8 space-y-4">
-                <Link href="/blog" className="text-sm text-primary hover:underline flex items-center gap-2">
-                    <ArrowLeft className="h-4 w-4" />
-                    Quay lại Blog
-                </Link>
-                <div className="flex gap-2">
+                <Breadcrumb 
+                  items={[
+                    { label: 'Blog', href: '/blog' },
+                    { label: post.title, href: `/blog/${post.slug}` },
+                  ]}
+                />
+                <div className="flex gap-2 !mt-2">
                     {post.tags.map(tag => (
                         <Badge key={tag} variant="default">{tag}</Badge>
                     ))}
                 </div>
-                <h1 className="font-headline text-4xl md:text-5xl text-primary !mb-4">
+                <h1 className="font-headline text-4xl md:text-5xl text-primary !mb-4 !mt-4">
                     {post.title}
                 </h1>
                 <div className="flex items-center gap-6 text-base text-muted-foreground">
