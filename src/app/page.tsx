@@ -97,6 +97,20 @@ const testimonials = [
     avatar: 'https://placehold.co/100x100.png',
     hint: 'man professional',
   },
+  {
+    quote: "Các giải pháp tư vấn rất thực tế và phù hợp với văn hóa của công ty chúng tôi. Đội ngũ nhân sự của chúng tôi đã gắn kết và làm việc hiệu quả hơn.",
+    name: 'Chị Dung',
+    title: 'Giám đốc Nhân sự, Tập đoàn XYZ',
+    avatar: 'https://placehold.co/100x100.png',
+    hint: 'professional asian woman',
+  },
+  {
+    quote: "Khóa học 'Lãnh Đạo Trong Kỷ Nguyên Số' đã mở ra cho tôi một tầm nhìn mới về quản lý. Kiến thức rất cập nhật và áp dụng được ngay.",
+    name: 'Anh Long',
+    title: 'Trưởng phòng, Công ty Tech',
+    avatar: 'https://placehold.co/100x100.png',
+    hint: 'smiling asian man',
+  },
 ];
 
 export default function Home() {
