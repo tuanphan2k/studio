@@ -102,7 +102,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="container py-20 md:py-32">
+      <section className="container py-20 md:py-32 overflow-x-hidden">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-headline font-extrabold text-primary">
@@ -122,13 +122,13 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div>
+          <div className="w-full">
             <Image
               src="https://placehold.co/600x500.png"
               alt="Các chuyên gia nhân sự trong một cuộc họp"
               width={600}
               height={500}
-              className="rounded-lg shadow-2xl"
+              className="rounded-lg shadow-2xl w-full h-auto object-cover"
               priority
               data-ai-hint="team meeting"
             />
