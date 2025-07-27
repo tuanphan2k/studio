@@ -138,6 +138,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* AI Job Description Generator Section */}
+      <section className="py-20 md:py-24">
+        <div className="container">
+          <JobDescriptionGenerator />
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="bg-card py-20 md:py-24">
         <div className="container">
@@ -185,13 +192,6 @@ export default function Home() {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* AI Job Description Generator Section */}
-      <section className="bg-primary/5 py-20 md:py-24">
-        <div className="container">
-          <JobDescriptionGenerator />
         </div>
       </section>
 
