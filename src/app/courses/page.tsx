@@ -16,7 +16,7 @@ export default function ServicesPage({ searchParams }: { searchParams?: { tab?: 
   return (
     <div className="container py-12 md:py-16">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold">Khóa Học & Dịch Vụ Tư Vấn</h1>
+        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Khóa Học & Dịch Vụ Tư Vấn</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
           Chúng tôi cung cấp các chương trình đào tạo chuyên sâu và giải pháp tư vấn chiến lược để đáp ứng nhu cầu phát triển của cá nhân và doanh nghiệp.
         </p>
