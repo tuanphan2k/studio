@@ -1,6 +1,7 @@
 import { posts } from '@/lib/blog';
 import { BlogCard } from '@/components/blog-card';
 import type { Metadata } from 'next';
+import { Breadcrumb } from '@/components/breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Blog - Nhân Tâm Phát',
@@ -10,6 +11,13 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <div className="container py-12 md:py-16">
+       <Breadcrumb
+        className="mb-8"
+        items={[
+          { label: "Trang chủ", href: "/" },
+          { label: "Blog", href: "/blog" },
+        ]}
+      />
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Góc Nhìn Chuyên Gia</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">

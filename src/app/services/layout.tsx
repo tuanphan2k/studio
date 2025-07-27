@@ -1,6 +1,7 @@
 
 import { ServicesTabs } from '@/components/services-tabs';
 import type { Metadata } from 'next';
+import { Breadcrumb } from '@/components/breadcrumb';
 
 export const metadata: Metadata = {
   title: 'Dịch Vụ của Nhân Tâm Phát',
@@ -14,6 +15,13 @@ export default function ServicesLayout({
 }) {
   return (
     <div className="container py-12 md:py-16">
+      <Breadcrumb
+        className="mb-8"
+        items={[
+          { label: "Trang chủ", href: "/" },
+          { label: "Dịch vụ", href: "/services/training" },
+        ]}
+      />
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Dịch Vụ Của Chúng Tôi</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">

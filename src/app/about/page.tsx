@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Target, BrainCircuit, HeartHandshake } from "lucide-react";
 import type { Metadata } from "next";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
   title: "Về Chúng Tôi - Nhân Tâm Phát",
@@ -37,7 +38,14 @@ export default function AboutPage() {
     <>
       {/* Hero Section */}
       <section className="bg-primary/5">
-        <div className="container py-20 md:py-24">
+        <div className="container pt-8 pb-20 md:py-24">
+          <Breadcrumb
+            className="mb-8"
+            items={[
+              { label: "Trang chủ", href: "/" },
+              { label: "Về Chúng Tôi", href: "/about" },
+            ]}
+          />
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Về Nhân Tâm Phát</h1>

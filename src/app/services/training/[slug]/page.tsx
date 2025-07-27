@@ -51,7 +51,9 @@ export default function CourseDetailPage({ params }: CourseDetailPageProps) {
             <div className="mb-8">
               <Breadcrumb
                 items={[
-                  { label: 'Các Khóa Đào Tạo', href: '/services/training' },
+                  { label: "Trang chủ", href: "/" },
+                  { label: "Dịch vụ", href: "/services/training" },
+                  { label: 'Đào tạo', href: '/services/training' },
                   { label: course.title, href: `/services/training/${course.slug}` },
                 ]}
               />

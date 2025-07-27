@@ -56,6 +56,7 @@ export default function PostPage({ params }: PostPageProps) {
             <div className="mb-8 space-y-4">
                 <Breadcrumb 
                   items={[
+                    { label: "Trang chủ", href: "/" },
                     { label: 'Blog', href: '/blog' },
                     { label: post.title, href: `/blog/${post.slug}` },
                   ]}

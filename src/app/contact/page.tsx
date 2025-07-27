@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
   title: "Liên Hệ - Nhân Tâm Phát",
@@ -17,6 +18,13 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="container py-12 md:py-16">
+      <Breadcrumb
+        className="mb-8"
+        items={[
+          { label: "Trang chủ", href: "/" },
+          { label: "Liên Hệ", href: "/contact" },
+        ]}
+      />
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Liên Hệ Với Chúng Tôi</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
