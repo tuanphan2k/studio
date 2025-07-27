@@ -52,10 +52,7 @@ export default function ContactPage() {
         <Card className="text-center">
           <CardHeader className="items-center">
             <div className="bg-primary/10 text-primary p-4 rounded-full">
-              <div className="flex gap-4">
-                <Facebook className="h-8 w-8" />
-                <Youtube className="h-8 w-8" />
-              </div>
+               <Facebook className="h-8 w-8" />
             </div>
             <CardTitle className="font-headline mt-4">Theo Dõi Chúng Tôi</CardTitle>
           </CardHeader>
