@@ -2,6 +2,8 @@
 
 import { generateJobDescription } from '@/ai/flows/generate-job-description';
 import { z } from 'zod';
+import { headers } from 'next/headers';
+import { rateLimiter } from '@/lib/rate-limiter';
 
 const jobDescriptionSchema = z.object({
   jobTitle: z.string().min(3, 'Job title must be at least 3 characters.'),
@@ -16,6 +18,17 @@ export async function generateDescriptionAction(
   prevState: State,
   formData: FormData
 ): Promise<State> {
+  const headersList = headers();
+  const ip = headersList.get('x-forwarded-for') ?? '127.0.0.1';
+
+  const { success, message } = await rateLimiter(ip);
+
+  if (!success) {
+    return {
+      error: message,
+    };
+  }
+
   const validatedFields = jobDescriptionSchema.safeParse({
     jobTitle: formData.get('jobTitle'),
   });
