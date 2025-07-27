@@ -1,3 +1,4 @@
+
 import { MetadataRoute } from 'next';
 import { courses } from '@/lib/data';
 import { posts } from '@/lib/blog';
@@ -6,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = 'https://nhantamphat.com';
 
   const courseUrls = courses.map((course) => ({
-    url: `${siteUrl}/courses/${course.slug}`,
+    url: `${siteUrl}/services/training/${course.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
@@ -33,13 +34,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-        url: `${siteUrl}/courses`,
+        url: `${siteUrl}/services/training`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
         priority: 0.7,
     },
     {
-      url: `${siteUrl}/consulting`,
+      url: `${siteUrl}/services/consulting`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.7,

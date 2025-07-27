@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Zap, Target, Users, Award, BrainCircuit, HeartHandshake } from 'lucide-react';
@@ -69,7 +70,7 @@ export default function Home() {
               </p>
               <div className="mt-8 flex gap-4 justify-center md:justify-start">
                 <Button asChild size="lg">
-                  <Link href="/courses">
+                  <Link href="/services/training">
                     Khám Phá Khóa Học <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
@@ -165,7 +166,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline">
-                <Link href="/courses">
+                <Link href="/services/training">
                     Xem Tất Cả Khóa Học <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
             </Button>

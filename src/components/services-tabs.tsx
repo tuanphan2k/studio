@@ -1,66 +1,37 @@
+
 'use client';
 
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CourseCard } from '@/components/course-card';
-import { ConsultingServiceCard } from '@/components/consulting-service-card';
-import type { Course, ConsultingService } from '@/lib/data';
+import { usePathname } from 'next/navigation';
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
-type ServicesTabsProps = {
-  courses: Course[];
-  consultingServices: ConsultingService[];
-}
-
-export function ServicesTabs({ courses, consultingServices }: ServicesTabsProps) {
-  const router = useRouter();
+export function ServicesTabs() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const initialTab = searchParams.get('tab') === 'consulting' ? 'consulting' : 'training';
-
-  const handleTabChange = (value: string) => {
-    const params = new URLSearchParams(searchParams.toString())
-    params.set('tab', value)
-    router.push(`${pathname}?${params.toString()}`, { scroll: false });
-  };
   
-  return (
-    <Tabs value={initialTab} onValueChange={handleTabChange} className="w-full">
-      <TabsList className="grid w-full grid-cols-2 md:w-[400px] mx-auto mb-12">
-        <TabsTrigger value="training">Các Khóa Đào Tạo</TabsTrigger>
-        <TabsTrigger value="consulting">Dịch Vụ Tư Vấn</TabsTrigger>
-      </TabsList>
-      
-      <TabsContent value="training">
-        <section id="training-courses">
-          <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Đào Tạo Chuyên Sâu</h2>
-              <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Nâng cao năng lực cho chuyên gia nhân sự ở mọi cấp độ.
-              </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {courses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-              ))}
-          </div>
-        </section>
-      </TabsContent>
+  const tabs = [
+      { name: "Các Khóa Đào Tạo", href: "/services/training" },
+      { name: "Dịch Vụ Tư Vấn", href: "/services/consulting" },
+  ];
 
-      <TabsContent value="consulting">
-        <section id="consulting-services">
-          <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold">Dịch Vụ Tư Vấn Doanh Nghiệp</h2>
-              <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Các giải pháp chiến lược được thiết kế riêng cho sự phát triển bền vững của tổ chức.
-              </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {consultingServices.map((service) => (
-                  <ConsultingServiceCard key={service.id} service={service} />
-              ))}
-          </div>
-        </section>
-      </TabsContent>
-    </Tabs>
+  const currentTab = pathname.includes('/consulting') ? '/services/consulting' : '/services/training';
+
+  return (
+    <div className="w-full flex justify-center mb-12">
+      <div className="bg-muted p-1 rounded-md">
+        {tabs.map((tab) => (
+          <Link href={tab.href} key={tab.href}>
+            <button
+              className={cn(
+                "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+                currentTab === tab.href ? "bg-background text-foreground shadow-sm" : "text-muted-foreground"
+              )}
+            >
+              {tab.name}
+            </button>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }

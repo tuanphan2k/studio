@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -14,8 +15,7 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Trang Chủ' },
-  { href: '/courses', label: 'Khóa Học' },
-  { href: '/consulting', label: 'Tư Vấn' },
+  { href: '/services/training', label: 'Dịch Vụ' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'Về Chúng Tôi' },
   { href: '/contact', label: 'Liên Hệ' },
@@ -23,6 +23,8 @@ const navLinks = [
 
 export function Header() {
   const pathname = usePathname();
+
+  const isServicesPage = pathname.startsWith('/services');
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
@@ -34,21 +36,24 @@ export function Header() {
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-base font-medium">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                'transition-colors hover:text-primary relative',
-                pathname.startsWith(link.href) && link.href !== '/' || pathname === link.href ? 'text-primary' : 'text-muted-foreground'
-              )}
-            >
-              {link.label}
-              {(pathname.startsWith(link.href) && link.href !== '/' || pathname === link.href) && (
-                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 h-0.5 w-6 bg-primary rounded-full" />
-              )}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = link.href.startsWith('/services') ? isServicesPage : pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  'transition-colors hover:text-primary relative',
+                  isActive ? 'text-primary' : 'text-muted-foreground'
+                )}
+              >
+                {link.label}
+                {isActive && (
+                  <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 h-0.5 w-6 bg-primary rounded-full" />
+                )}
+              </Link>
+            )
+          })}
         </nav>
         <div className="flex items-center gap-2">
             <Sheet>
@@ -67,18 +72,21 @@ export function Header() {
                     </span>
                   </Link>
                   <nav className="grid gap-4">
-                    {navLinks.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className={cn(
-                          'text-lg font-medium transition-colors hover:text-primary',
-                          pathname.startsWith(link.href) && link.href !== '/' || pathname === link.href ? 'text-primary' : 'text-muted-foreground'
-                        )}
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
+                    {navLinks.map((link) => {
+                      const isActive = link.href.startsWith('/services') ? isServicesPage : pathname === link.href;
+                      return (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className={cn(
+                            'text-lg font-medium transition-colors hover:text-primary',
+                            isActive ? 'text-primary' : 'text-muted-foreground'
+                          )}
+                        >
+                          {link.label}
+                        </Link>
+                      )
+                    })}
                   </nav>
                 </div>
               </SheetContent>
