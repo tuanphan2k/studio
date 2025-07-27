@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Zap, Target, Users, Star, Award, BrainCircuit, HeartHandshake } from 'lucide-react';
@@ -14,6 +16,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
+import React from 'react';
 
 const benefits = [
   {
@@ -91,6 +95,10 @@ const testimonials = [
 
 export default function Home() {
   const featuredCourses = courses.slice(0, 3);
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  )
+
   return (
     <>
       {/* Hero Section */}
@@ -229,11 +237,14 @@ export default function Home() {
             </p>
           </div>
           <Carousel
+            plugins={[plugin.current]}
             opts={{
               align: "start",
               loop: true,
             }}
             className="w-full max-w-4xl mx-auto"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
