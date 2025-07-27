@@ -1,3 +1,6 @@
+import type { LucideIcon } from 'lucide-react';
+import { Briefcase, Building2, Lightbulb, TrendingUp } from 'lucide-react';
+
 export type Course = {
   id: string;
   slug: string;
@@ -7,6 +10,13 @@ export type Course = {
   thumbnail: string;
   duration: string;
   level: 'Mới bắt đầu' | 'Trung cấp' | 'Nâng cao';
+};
+
+export type ConsultingService = {
+  id: string;
+  title: string;
+  shortDescription: string;
+  icon: LucideIcon;
 };
 
 export const courses: Course[] = [
@@ -49,5 +59,33 @@ export const courses: Course[] = [
     thumbnail: 'https://placehold.co/600x400.png',
     duration: '5 Tuần',
     level: 'Trung cấp',
+  },
+];
+
+
+export const consultingServices: ConsultingService[] = [
+  {
+    id: 'consult-1',
+    title: 'Tư Vấn Chiến Lược Nhân Sự',
+    shortDescription: 'Xây dựng và triển khai chiến lược nhân sự toàn diện, phù hợp với mục tiêu kinh doanh của doanh nghiệp.',
+    icon: Briefcase,
+  },
+  {
+    id: 'consult-2',
+    title: 'Tái Cấu Trúc Tổ Chức',
+    shortDescription: 'Tối ưu hóa cơ cấu tổ chức để nâng cao hiệu quả hoạt động và sự linh hoạt của doanh nghiệp.',
+    icon: Building2,
+  },
+  {
+    id: 'consult-3',
+    title: 'Xây Dựng Văn Hóa Doanh Nghiệp',
+    shortDescription: 'Kiến tạo môi trường làm việc tích cực, gắn kết, thúc đẩy sự sáng tạo và phát triển bền vững.',
+    icon: Lightbulb,
+  },
+  {
+    id: 'consult-4',
+    title: 'Phát Triển Năng Lực Lãnh Đạo',
+    shortDescription: 'Đào tạo và phát triển đội ngũ lãnh đạo kế thừa, sẵn sàng đối mặt với các thách thức trong tương lai.',
+    icon: TrendingUp,
   },
 ];
