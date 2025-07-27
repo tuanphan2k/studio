@@ -2,14 +2,22 @@ import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import type { ConsultingService } from '@/lib/data';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BrainCircuit, Users, Building2, TrendingUp, LucideProps } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 type ConsultingServiceCardProps = {
   service: ConsultingService;
 };
 
+const iconMap: { [key: string]: LucideIcon } = {
+  BrainCircuit,
+  Users,
+  Building2,
+  TrendingUp,
+};
+
 export function ConsultingServiceCard({ service }: ConsultingServiceCardProps) {
-  const Icon = service.icon;
+  const Icon = iconMap[service.icon] || BrainCircuit; // Fallback to a default icon
   return (
     <Card className="flex flex-col text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       <CardHeader className="items-center pb-4">

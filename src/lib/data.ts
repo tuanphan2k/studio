@@ -16,7 +16,7 @@ export type ConsultingService = {
   id: string;
   title: string;
   shortDescription: string;
-  icon: LucideIcon;
+  icon: string;
 };
 
 export type Employee = {
@@ -86,25 +86,25 @@ export const consultingServices: ConsultingService[] = [
     id: 'consult-1',
     title: 'Chiến Lược Nhân Sự Toàn Diện',
     shortDescription: 'Thiết kế và đồng bộ hóa chiến lược nhân sự với mục tiêu kinh doanh, tạo nền tảng cho sự phát triển bền vững.',
-    icon: BrainCircuit,
+    icon: 'BrainCircuit',
   },
   {
     id: 'consult-2',
     title: 'Tối Ưu Hóa Cơ Cấu Tổ Chức',
     shortDescription: 'Phân tích và thiết kế lại cơ cấu tổ chức để tăng cường sự linh hoạt, tối ưu hóa luồng công việc và thúc đẩy tăng trưởng.',
-    icon: Users,
+    icon: 'Users',
   },
   {
     id: 'consult-3',
     title: 'Xây Dựng Văn Hóa Doanh Nghiệp',
     shortDescription: 'Kiến tạo một môi trường làm việc gắn kết, tích cực, thúc đẩy sự đổi mới và giữ chân nhân tài hàng đầu.',
-    icon: Building2,
+    icon: 'Building2',
   },
   {
     id: 'consult-4',
     title: 'Phát Triển Năng Lực Lãnh Đạo',
     shortDescription: 'Xây dựng và triển khai các chương trình đào tạo nhằm phát triển đội ngũ lãnh đạo kế thừa mạnh mẽ và hiệu quả.',
-    icon: TrendingUp,
+    icon: 'TrendingUp',
   },
 ];
 
