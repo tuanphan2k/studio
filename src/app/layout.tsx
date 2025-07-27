@@ -5,6 +5,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Inter, Lexend } from 'next/font/google';
+import { FloatingPhone } from '@/components/layout/floating-phone';
 
 export const metadata: Metadata = {
   title: 'Nhân Tâm Phát - Đào tạo chuyên sâu cho chuyên gia nhân sự',
@@ -41,6 +42,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <FloatingPhone />
         <Toaster />
       </body>
     </html>
