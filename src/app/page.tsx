@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { EmployeeCard } from '@/components/employee-card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { courses } from '@/lib/data';
+import { courses, employees } from '@/lib/data';
 import { CourseCard } from '@/components/course-card';
 import {
   Carousel,
@@ -48,30 +48,6 @@ const differentiators = [
     icon: <HeartHandshake className="h-8 w-8 text-accent" />,
     title: 'Tận Tâm & Chuyên Sâu',
     description: 'Chúng tôi cam kết đồng hành, lắng nghe và cung cấp các giải pháp phù hợp nhất cho từng khách hàng.',
-  },
-];
-
-const employees = [
-  {
-    name: 'Bà Lan',
-    title: 'Giảng Viên & Chuyên Gia Tư Vấn Chính',
-    bio: 'Bà Lan có hơn 15 năm kinh nghiệm trong lĩnh vực nhân sự, chuyên đào tạo và tư vấn cho các doanh nghiệp.',
-    image: 'https://placehold.co/400x400.png',
-    hint: 'professional woman'
-  },
-  {
-    name: 'Ông Minh',
-    title: 'Cố Vấn Hướng Nghiệp & Doanh Nghiệp',
-    bio: 'Ông Minh chuyên về phát triển sự nghiệp và tư vấn chiến lược nhân sự cho các tổ chức.',
-    image: 'https://placehold.co/400x400.png',
-    hint: 'professional man'
-  },
-  {
-    name: 'Cô Mai',
-    title: 'Chuyên Viên Phát Triển Chương Trình',
-    bio: 'Cô Mai thiết kế nội dung khóa học và các giải pháp tư vấn phù hợp và có tác động đến học viên và doanh nghiệp.',
-    image: 'https://placehold.co/400x400.png',
-    hint: 'professional woman smiling'
   },
 ];
 

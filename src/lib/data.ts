@@ -19,6 +19,14 @@ export type ConsultingService = {
   icon: LucideIcon;
 };
 
+export type Employee = {
+  name: string;
+  title: string;
+  bio: string;
+  image: string;
+  hint: string;
+};
+
 export const courses: Course[] = [
   {
     id: '1',
@@ -87,5 +95,29 @@ export const consultingServices: ConsultingService[] = [
     title: 'Phát Triển Năng Lực Lãnh Đạo',
     shortDescription: 'Đào tạo và phát triển đội ngũ lãnh đạo kế thừa, sẵn sàng đối mặt với các thách thức trong tương lai.',
     icon: TrendingUp,
+  },
+];
+
+export const employees: Employee[] = [
+  {
+    name: 'Bà Lan',
+    title: 'Giảng Viên & Chuyên Gia Tư Vấn Chính',
+    bio: 'Bà Lan có hơn 15 năm kinh nghiệm trong lĩnh vực nhân sự, chuyên đào tạo và tư vấn cho các doanh nghiệp.',
+    image: 'https://placehold.co/400x400.png',
+    hint: 'professional woman'
+  },
+  {
+    name: 'Ông Minh',
+    title: 'Cố Vấn Hướng Nghiệp & Doanh Nghiệp',
+    bio: 'Ông Minh chuyên về phát triển sự nghiệp và tư vấn chiến lược nhân sự cho các tổ chức.',
+    image: 'https://placehold.co/400x400.png',
+    hint: 'professional man'
+  },
+  {
+    name: 'Cô Mai',
+    title: 'Chuyên Viên Phát Triển Chương Trình',
+    bio: 'Cô Mai thiết kế nội dung khóa học và các giải pháp tư vấn phù hợp và có tác động đến học viên và doanh nghiệp.',
+    image: 'https://placehold.co/400x400.png',
+    hint: 'professional woman smiling'
   },
 ];
