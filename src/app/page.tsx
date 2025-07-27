@@ -29,21 +29,21 @@ const employees = [
     name: 'Jane Doe',
     title: 'Lead Instructor',
     bio: 'Jane has over 15 years of experience in human resources and is passionate about teaching the next generation of HR leaders.',
-    image: 'https://placehold.co/400x400',
+    image: 'https://placehold.co/400x400.png',
     hint: 'professional woman'
   },
   {
     name: 'John Smith',
     title: 'Career Coach',
     bio: 'John specializes in career development and helps students navigate their career paths in the HR field.',
-    image: 'https://placehold.co/400x400',
+    image: 'https://placehold.co/400x400.png',
     hint: 'professional man'
   },
   {
     name: 'Emily White',
     title: 'Curriculum Developer',
     bio: 'Emily designs our cutting-edge course content, ensuring it is relevant and impactful for our students.',
-    image: 'https://placehold.co/400x400',
+    image: 'https://placehold.co/400x400.png',
     hint: 'professional woman smiling'
   },
 ];
@@ -53,21 +53,21 @@ const testimonials = [
     quote: "The 'Leadership in the Digital Age' course was a game-changer for my career. The insights were practical and immediately applicable.",
     name: 'Sarah Johnson',
     title: 'HR Manager',
-    avatar: 'https://placehold.co/100x100',
+    avatar: 'https://placehold.co/100x100.png',
     hint: 'woman smiling',
   },
   {
     quote: "As someone new to the field, the 'Foundations of HR' course provided the perfect grounding. I feel so much more confident in my role.",
     name: 'Michael Chen',
     title: 'HR Coordinator',
-    avatar: 'https://placehold.co/100x100',
+    avatar: 'https://placehold.co/100x100.png',
     hint: 'man portrait',
   },
   {
     quote: "The quality of instruction and the supportive community at ElevateHR are top-notch. I highly recommend it to any HR professional.",
     name: 'David Rodriguez',
     title: 'Senior HR Business Partner',
-    avatar: 'https://placehold.co/100x100',
+    avatar: 'https://placehold.co/100x100.png',
     hint: 'man professional',
   },
 ];
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
           <div>
             <Image
-              src="https://placehold.co/600x500"
+              src="https://placehold.co/600x500.png"
               alt="HR professionals in a meeting"
               width={600}
               height={500}
