@@ -4,7 +4,7 @@ import { ConsultingServiceCard } from '@/components/consulting-service-card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { Separator } from '@/components/ui/separator';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function ServicesPage() {
   return (
@@ -16,40 +16,47 @@ export default function ServicesPage() {
         </p>
       </div>
 
-      {/* Training Courses Section */}
-      <section id="training-courses" className="mb-16">
-        <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Đào Tạo Chuyên Sâu</h2>
-            <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Nâng cao năng lực cho chuyên gia nhân sự ở mọi cấp độ.
-            </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {courses.map((course) => (
-            <CourseCard key={course.id} course={course} />
-            ))}
-        </div>
-      </section>
-      
-      <Separator className="my-16" />
+      <Tabs defaultValue="training" className="w-full">
+        <TabsList className="grid w-full grid-cols-2 md:w-[400px] mx-auto mb-12">
+          <TabsTrigger value="training">Các Khóa Đào Tạo</TabsTrigger>
+          <TabsTrigger value="consulting">Dịch Vụ Tư Vấn</TabsTrigger>
+        </TabsList>
+        
+        <TabsContent value="training">
+          <section id="training-courses">
+            <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Đào Tạo Chuyên Sâu</h2>
+                <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Nâng cao năng lực cho chuyên gia nhân sự ở mọi cấp độ.
+                </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {courses.map((course) => (
+                <CourseCard key={course.id} course={course} />
+                ))}
+            </div>
+          </section>
+        </TabsContent>
 
-      {/* Consulting Services Section */}
-      <section id="consulting-services" className="mb-16">
-        <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Dịch Vụ Tư Vấn Doanh Nghiệp</h2>
-            <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Các giải pháp chiến lược được thiết kế riêng cho sự phát triển bền vững của tổ chức.
-            </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {consultingServices.map((service) => (
-                <ConsultingServiceCard key={service.id} service={service} />
-            ))}
-        </div>
-      </section>
+        <TabsContent value="consulting">
+          <section id="consulting-services">
+            <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-headline font-bold">Dịch Vụ Tư Vấn Doanh Nghiệp</h2>
+                <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
+                    Các giải pháp chiến lược được thiết kế riêng cho sự phát triển bền vững của tổ chức.
+                </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {consultingServices.map((service) => (
+                    <ConsultingServiceCard key={service.id} service={service} />
+                ))}
+            </div>
+          </section>
+        </TabsContent>
+      </Tabs>
 
       {/* Contact Us Section */}
-      <section className="bg-primary/5 py-20 md:py-24 text-center rounded-lg">
+      <section className="bg-primary/5 py-20 md:py-24 text-center rounded-lg mt-16">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-headline font-bold">Bạn Cần Một Giải Pháp Riêng?</h2>
           <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
