@@ -102,9 +102,9 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-20 md:py-32 overflow-x-hidden">
+      <section className="bg-primary/5 py-20 md:py-32 overflow-x-hidden">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-6xl font-headline font-extrabold text-primary">
                 Nâng Tầm Nhân Sự, Vững Bước Doanh Nghiệp
@@ -113,7 +113,7 @@ export default function Home() {
                 Khai phá tiềm năng đội ngũ của bạn với các chương trình đào tạo và dịch vụ tư vấn nhân sự chuyên sâu.
               </p>
               <div className="mt-8 flex gap-4 justify-center md:justify-start">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                <Button asChild size="lg">
                   <Link href="/courses">
                     Khám Phá Dịch Vụ <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
@@ -123,13 +123,12 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="w-full">
+            <div className="relative w-full aspect-[6/5]">
               <Image
                 src="https://placehold.co/600x500.png"
                 alt="Các chuyên gia nhân sự trong một cuộc họp"
-                height={500}
-                width={600}
-                className="rounded-lg shadow-2xl w-full h-auto object-cover"
+                fill
+                className="rounded-lg shadow-2xl object-cover"
                 priority
                 data-ai-hint="team meeting"
               />
@@ -174,7 +173,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {differentiators.map((d) => (
-              <Card key={d.title} className="text-center p-2">
+              <Card key={d.title} className="text-center border-t-4 border-accent pt-6">
                 <CardHeader className="items-center">
                   <div className="p-4 bg-accent/10 rounded-full">{d.icon}</div>
                   <CardTitle className="font-headline text-2xl mt-4">{d.title}</CardTitle>
@@ -244,7 +243,7 @@ export default function Home() {
               align: "start",
               loop: true,
             }}
-            className="w-full max-w-4xl mx-auto"
+            className="w-full max-w-6xl mx-auto"
             onMouseEnter={plugin.current.stop}
             onMouseLeave={plugin.current.reset}
           >
@@ -252,7 +251,7 @@ export default function Home() {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
-                    <Card className="flex flex-col h-full bg-background">
+                    <Card className="flex flex-col h-full bg-background shadow-lg">
                       <CardContent className="p-6 flex-grow flex flex-col justify-center">
                         <div className="flex mb-4">
                           {[...Array(5)].map((_, i) => (

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import Link from "next/link";
 
 
 export default function ContactPage() {
@@ -52,14 +53,26 @@ export default function ContactPage() {
         <Card className="text-center">
           <CardHeader className="items-center">
             <div className="bg-primary/10 text-primary p-4 rounded-full">
-               <Facebook className="h-8 w-8" />
+               <MessageSquare className="h-8 w-8" />
             </div>
             <CardTitle className="font-headline mt-4">Theo Dõi Chúng Tôi</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground">
+             <p className="text-muted-foreground mb-4">
               Luôn kết nối để nhận tin tức, sự kiện và cập nhật mới nhất từ cộng đồng của chúng tôi.
             </p>
+            <div className="flex justify-center gap-4">
+              <Button asChild variant="outline" size="icon">
+                <Link href="#" aria-label="Facebook">
+                  <Facebook className="h-5 w-5 text-primary" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="icon">
+                <Link href="#" aria-label="YouTube">
+                  <Youtube className="h-5 w-5 text-primary" />
+                </Link>
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </div>
@@ -100,13 +113,16 @@ export default function ContactPage() {
           <CardHeader>
             <CardTitle className="font-headline">Bản Đồ</CardTitle>
           </CardHeader>
-          <CardContent className="flex flex-col items-center text-center">
-            <div className="w-full h-64 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex flex-col items-center justify-center text-white p-4">
-              <MapPin className="h-12 w-12 mb-2" />
-              <h3 className="text-xl font-bold">Bản Đồ Tương Tác</h3>
-              <p>Tìm tòa nhà, bãi đậu xe và các cơ sở vật chất</p>
-            </div>
-            <Button variant="outline" className="mt-4 w-full">Xem Toàn Bộ Bản Đồ</Button>
+          <CardContent className="p-0">
+             <div className="relative w-full h-full min-h-[300px]">
+                <Image 
+                    src="https://placehold.co/600x400.png"
+                    data-ai-hint="map location"
+                    alt="Bản đồ vị trí văn phòng"
+                    fill
+                    className="object-cover rounded-b-lg"
+                />
+             </div>
           </CardContent>
         </Card>
       </div>

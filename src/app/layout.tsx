@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
-import { Inter, Lexend } from 'next/font/google';
+import { Playfair_Display, PT_Sans } from 'next/font/google';
 import { FloatingPhone } from '@/components/layout/floating-phone';
 
 export const metadata: Metadata = {
@@ -12,14 +12,15 @@ export const metadata: Metadata = {
   description: 'Các khóa học chuyên nghiệp được thiết kế để nâng cao kỹ năng nhân sự và thúc đẩy sự nghiệp của bạn.',
 };
 
-const fontBody = Inter({
-  subsets: ['latin'],
+const fontBody = PT_Sans({
+  subsets: ['latin', 'vietnamese'],
+  weight: ['400', '700'],
   display: 'swap',
   variable: '--font-body',
 });
 
-const fontHeadline = Lexend({
-  subsets: ['latin'],
+const fontHeadline = Playfair_Display({
+  subsets: ['latin', 'vietnamese'],
   display: 'swap',
   variable: '--font-headline',
 });
