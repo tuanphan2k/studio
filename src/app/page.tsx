@@ -3,8 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Zap, Target, Users } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CourseCard } from '@/components/course-card';
-import { courses } from '@/lib/data';
+import { EmployeeCard } from '@/components/employee-card';
 
 const benefits = [
   {
@@ -24,9 +23,31 @@ const benefits = [
   },
 ];
 
+const employees = [
+  {
+    name: 'Jane Doe',
+    title: 'Lead Instructor',
+    bio: 'Jane has over 15 years of experience in human resources and is passionate about teaching the next generation of HR leaders.',
+    image: 'https://placehold.co/400x400',
+    hint: 'professional woman'
+  },
+  {
+    name: 'John Smith',
+    title: 'Career Coach',
+    bio: 'John specializes in career development and helps students navigate their career paths in the HR field.',
+    image: 'https://placehold.co/400x400',
+    hint: 'professional man'
+  },
+  {
+    name: 'Emily White',
+    title: 'Curriculum Developer',
+    bio: 'Emily designs our cutting-edge course content, ensuring it is relevant and impactful for our students.',
+    image: 'https://placehold.co/400x400',
+    hint: 'professional woman smiling'
+  },
+];
+
 export default function Home() {
-  const featuredCourses = courses.slice(0, 3);
-  
   return (
     <>
       {/* Hero Section */}
@@ -89,26 +110,19 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Featured Courses Section */}
+      {/* Meet Our Team Section */}
        <section className="container py-20 md:py-24">
         <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Featured Courses</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Meet Our Team</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get started with some of our most popular and impactful courses.
+              Our instructors are experienced professionals dedicated to your success.
             </p>
           </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredCourses.map((course) => (
-            <CourseCard key={course.id} course={course} />
+          {employees.map((employee) => (
+            <EmployeeCard key={employee.name} employee={employee} />
           ))}
         </div>
-         <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline">
-                <Link href="/courses">
-                  View All Courses <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-          </div>
       </section>
     </>
   );
