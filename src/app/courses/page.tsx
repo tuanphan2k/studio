@@ -1,3 +1,5 @@
+'use client';
+
 import { courses, consultingServices } from '@/lib/data';
 import { CourseCard } from '@/components/course-card';
 import { ConsultingServiceCard } from '@/components/consulting-service-card';
@@ -5,8 +7,18 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 
 export default function ServicesPage() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const tab = searchParams.get('tab') || 'training';
+
+  const handleTabChange = (value: string) => {
+    router.push(`${pathname}?tab=${value}`, { scroll: false });
+  };
+  
   return (
     <div className="container py-12 md:py-16">
       <div className="text-center mb-12">
@@ -16,7 +28,7 @@ export default function ServicesPage() {
         </p>
       </div>
 
-      <Tabs defaultValue="training" className="w-full">
+      <Tabs value={tab} onValueChange={handleTabChange} className="w-full">
         <TabsList className="grid w-full grid-cols-2 md:w-[400px] mx-auto mb-12">
           <TabsTrigger value="training">Các Khóa Đào Tạo</TabsTrigger>
           <TabsTrigger value="consulting">Dịch Vụ Tư Vấn</TabsTrigger>
