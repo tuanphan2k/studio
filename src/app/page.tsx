@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import React from 'react';
+import { JobDescriptionGenerator } from '@/components/job-description-generator';
 
 const benefits = [
   {
@@ -184,6 +185,13 @@ export default function Home() {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* AI Job Description Generator Section */}
+      <section className="bg-primary/5 py-20 md:py-24">
+        <div className="container">
+          <JobDescriptionGenerator />
         </div>
       </section>
 
