@@ -53,12 +53,11 @@ export default function AboutPage() {
                 Sứ mệnh của chúng tôi là trang bị cho các chuyên gia nhân sự và doanh nghiệp những kiến thức, kỹ năng và giải pháp để xây dựng những nơi làm việc phát triển trong tương lai.
               </p>
             </div>
-            <div>
+            <div className="relative w-full aspect-[4/3]">
               <Image 
                 src="https://placehold.co/600x400.png" 
                 alt="Đội ngũ văn phòng đang hợp tác"
-                width={600}
-                height={400}
+                fill
                 className="rounded-lg shadow-xl object-cover"
                 data-ai-hint="professional team collaboration"
               />
