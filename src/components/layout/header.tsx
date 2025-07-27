@@ -14,7 +14,8 @@ import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Trang Chủ' },
-  { href: '/courses', label: 'Dịch Vụ' },
+  { href: '/courses', label: 'Khóa Học' },
+  { href: '/consulting', label: 'Tư Vấn' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'Về Chúng Tôi' },
   { href: '/contact', label: 'Liên Hệ' },

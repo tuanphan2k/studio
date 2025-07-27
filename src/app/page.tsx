@@ -70,7 +70,7 @@ export default function Home() {
               <div className="mt-8 flex gap-4 justify-center md:justify-start">
                 <Button asChild size="lg">
                   <Link href="/courses">
-                    Khám Phá Dịch Vụ <ArrowRight className="ml-2 h-5 w-5" />
+                    Khám Phá Khóa Học <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">
@@ -153,9 +153,9 @@ export default function Home() {
       <section className="bg-card py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Học & Dịch Vụ Nổi Bật</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Các Khóa Học Nổi Bật</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Khám phá các khóa học và dịch vụ tư vấn hàng đầu được thiết kế để nâng cao năng lực cho cá nhân và tổ chức.
+              Khám phá các khóa học hàng đầu được thiết kế để nâng cao năng lực cho cá nhân và tổ chức.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -166,7 +166,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline">
                 <Link href="/courses">
-                    Xem Tất Cả Dịch Vụ <ArrowRight className="ml-2 h-4 w-4" />
+                    Xem Tất Cả Khóa Học <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
             </Button>
         </div>

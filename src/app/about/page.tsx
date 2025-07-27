@@ -117,10 +117,15 @@ export default function AboutPage() {
           <p className="mt-3 text-lg text-muted-foreground max-w-xl mx-auto">
             Tìm hiểu cách các khóa học và dịch vụ tư vấn của chúng tôi có thể giúp bạn và doanh nghiệp của bạn phát triển.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg">
               <Link href="/courses">
-                Xem Dịch Vụ Của Chúng Tôi <ArrowRight className="ml-2 h-5 w-5" />
+                Xem Các Khóa Học <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+             <Button asChild size="lg" variant="outline">
+              <Link href="/consulting">
+                Xem Dịch Vụ Tư Vấn
               </Link>
             </Button>
           </div>
