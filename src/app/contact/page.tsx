@@ -1,14 +1,11 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Facebook, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Youtube, MessageSquare } from "lucide-react";
 import Image from "next/image";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
-const officeHours = [
-  { office: "Văn phòng Tuyển sinh", hours: "Thứ Hai-Thứ Sáu: 8:00 - 18:00" },
-  { office: "Dịch vụ Sinh viên", hours: "Thứ Hai-Thứ Sáu: 9:00 - 17:00" },
-  { office: "Tư vấn Học tập", hours: "Thứ Hai-Thứ Sáu: 8:30 - 16:30" },
-  { office: "Hỗ trợ Tài chính", hours: "Thứ Hai-Thứ Sáu: 9:00 - 16:00" },
-];
 
 export default function ContactPage() {
   return (
@@ -72,19 +69,35 @@ export default function ContactPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <Card>
-          <CardHeader>
-            <CardTitle className="font-headline">Giờ Làm Việc</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              {officeHours.map((item) => (
-                <div key={item.office} className="flex justify-between items-center bg-secondary/50 p-4 rounded-md">
-                  <p className="font-semibold">{item.office}</p>
-                  <p className="text-muted-foreground">{item.hours}</p>
-                </div>
-              ))}
-            </div>
-          </CardContent>
+            <CardHeader>
+                <CardTitle className="font-headline flex items-center gap-2">
+                    <MessageSquare className="h-6 w-6" />
+                    Để Lại Lời Nhắn
+                </CardTitle>
+            </CardHeader>
+            <CardContent>
+                <form className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                            <Label htmlFor="firstName">Tên</Label>
+                            <Input id="firstName" placeholder="Nhập tên của bạn" />
+                        </div>
+                        <div className="space-y-2">
+                            <Label htmlFor="lastName">Họ</Label>
+                            <Input id="lastName" placeholder="Nhập họ của bạn" />
+                        </div>
+                    </div>
+                    <div className="space-y-2">
+                        <Label htmlFor="email">Email</Label>
+                        <Input id="email" type="email" placeholder="Nhập email của bạn" />
+                    </div>
+                    <div className="space-y-2">
+                        <Label htmlFor="message">Lời nhắn</Label>
+                        <Textarea id="message" placeholder="Nhập lời nhắn của bạn ở đây" rows={5} />
+                    </div>
+                    <Button type="submit" className="w-full">Gửi Lời Nhắn</Button>
+                </form>
+            </CardContent>
         </Card>
         <Card>
           <CardHeader>
