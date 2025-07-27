@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu, GraduationCap } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/sheet';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Trang Chủ' },
@@ -25,9 +26,9 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="container flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <GraduationCap className="h-8 w-8 text-primary" />
+          <Image src="/logo.png" alt="Nhân Tâm Phát Logo" width={40} height={40} />
           <span className="text-2xl font-bold font-headline text-foreground">
-            ElevateHR
+            Nhân Tâm Phát
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-base font-medium">
@@ -58,9 +59,9 @@ export function Header() {
               <SheetContent side="right">
                 <div className="grid gap-6 p-6">
                   <Link href="/" className="flex items-center gap-2 mb-4">
-                     <GraduationCap className="h-7 w-7 text-primary" />
+                     <Image src="/logo.png" alt="Nhân Tâm Phát Logo" width={36} height={36} />
                     <span className="text-xl font-bold font-headline text-foreground">
-                      ElevateHR
+                      Nhân Tâm Phát
                     </span>
                   </Link>
                   <nav className="grid gap-4">

@@ -6,7 +6,7 @@ export default function AboutPage() {
     <div className="container py-12 md:py-16">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Về ElevateHR</h1>
+          <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Về Nhân Tâm Phát</h1>
           <p className="mt-4 text-lg text-muted-foreground">
             Sứ mệnh của chúng tôi là trang bị cho các chuyên gia nhân sự và các nhà lãnh đạo tổ chức những kiến thức và kỹ năng để xây dựng những nơi làm việc phát triển trong tương lai.
           </p>

@@ -64,7 +64,7 @@ const testimonials = [
     hint: 'man portrait',
   },
   {
-    quote: "Chất lượng giảng dạy và cộng đồng hỗ trợ tại ElevateHR thật tuyệt vời. Tôi rất khuyến khích bất kỳ chuyên gia nhân sự nào tham gia.",
+    quote: "Chất lượng giảng dạy và cộng đồng hỗ trợ tại Nhân Tâm Phát thật tuyệt vời. Tôi rất khuyến khích bất kỳ chuyên gia nhân sự nào tham gia.",
     name: 'Anh Khoa',
     title: 'Đối tác Kinh doanh Nhân sự Cấp cao',
     avatar: 'https://placehold.co/100x100.png',
@@ -114,7 +114,7 @@ export default function Home() {
       <section className="bg-card py-20 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold">Tại Sao Chọn ElevateHR?</h2>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">Tại Sao Chọn Nhân Tâm Phát?</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
               Chúng tôi cung cấp các giải pháp toàn diện cho việc đào tạo và tư vấn nhân sự chiến lược.
             </p>
@@ -156,7 +156,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold">Khách Hàng Nói Gì Về Chúng Tôi</h2>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Lắng nghe chia sẻ từ các chuyên gia nhân sự đã thăng tiến trong sự nghiệp và phát triển tổ chức cùng ElevateHR.
+              Lắng nghe chia sẻ từ các chuyên gia nhân sự đã thăng tiến trong sự nghiệp và phát triển tổ chức cùng Nhân Tâm Phát.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

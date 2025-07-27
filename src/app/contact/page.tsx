@@ -45,7 +45,7 @@ export default function ContactPage() {
           <CardContent>
             <div className="text-muted-foreground space-y-2">
               <p>Văn phòng chính: <a href="tel:+1234567890" className="text-primary hover:underline">+1 (234) 567-890</a></p>
-              <p>Email: <a href="mailto:contact@elevatehr.com" className="text-primary hover:underline">contact@elevatehr.com</a></p>
+              <p>Email: <a href="mailto:contact@nhantamphat.com" className="text-primary hover:underline">contact@nhantamphat.com</a></p>
             </div>
           </CardContent>
         </Card>

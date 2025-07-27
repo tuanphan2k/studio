@@ -11,7 +11,7 @@ export default function TermsPage() {
         <CardContent className="prose max-w-none dark:prose-invert">
           <h2>1. Giới Thiệu</h2>
           <p>
-            Chào mừng đến với ElevateHR. Các Điều khoản Dịch vụ này chi phối việc bạn sử dụng trang web và các dịch vụ của chúng tôi. Bằng cách truy cập hoặc sử dụng dịch vụ của chúng tôi, bạn đồng ý bị ràng buộc bởi các điều khoản này.
+            Chào mừng đến với Nhân Tâm Phát. Các Điều khoản Dịch vụ này chi phối việc bạn sử dụng trang web và các dịch vụ của chúng tôi. Bằng cách truy cập hoặc sử dụng dịch vụ của chúng tôi, bạn đồng ý bị ràng buộc bởi các điều khoản này.
           </p>
 
           <h2>2. Sử Dụng Dịch Vụ Của Chúng Tôi</h2>
@@ -21,7 +21,7 @@ export default function TermsPage() {
 
           <h2>3. Sở Hữu Trí Tuệ</h2>
           <p>
-            Dịch vụ và nội dung, tính năng và chức năng ban đầu của nó là và sẽ vẫn là tài sản độc quyền của ElevateHR và các nhà cấp phép của nó. Nhãn hiệu và bao bì thương mại của chúng tôi không được sử dụng liên quan đến bất kỳ sản phẩm hoặc dịch vụ nào mà không có sự đồng ý trước bằng văn bản của ElevateHR.
+            Dịch vụ và nội dung, tính năng và chức năng ban đầu của nó là và sẽ vẫn là tài sản độc quyền của Nhân Tâm Phát và các nhà cấp phép của nó. Nhãn hiệu và bao bì thương mại của chúng tôi không được sử dụng liên quan đến bất kỳ sản phẩm hoặc dịch vụ nào mà không có sự đồng ý trước bằng văn bản của Nhân Tâm Phát.
           </p>
           
           <h2>4. Chấm Dứt</h2>
@@ -31,7 +31,7 @@ export default function TermsPage() {
           
           <h2>5. Giới Hạn Trách Nhiệm</h2>
           <p>
-            Trong mọi trường hợp, ElevateHR, cũng như các giám đốc, nhân viên, đối tác, đại lý, nhà cung cấp hoặc chi nhánh của mình, sẽ không chịu trách nhiệm cho bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, do hậu quả hoặc trừng phạt nào, bao gồm nhưng không giới hạn ở việc mất lợi nhuận, dữ liệu, sử dụng, thiện chí hoặc các tổn thất vô hình khác, do việc bạn truy cập hoặc sử dụng hoặc không thể truy cập hoặc sử dụng Dịch vụ.
+            Trong mọi trường hợp, Nhân Tâm Phát, cũng như các giám đốc, nhân viên, đối tác, đại lý, nhà cung cấp hoặc chi nhánh của mình, sẽ không chịu trách nhiệm cho bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, do hậu quả hoặc trừng phạt nào, bao gồm nhưng không giới hạn ở việc mất lợi nhuận, dữ liệu, sử dụng, thiện chí hoặc các tổn thất vô hình khác, do việc bạn truy cập hoặc sử dụng hoặc không thể truy cập hoặc sử dụng Dịch vụ.
           </p>
 
           <h2>6. Luật Điều Chỉnh</h2>
