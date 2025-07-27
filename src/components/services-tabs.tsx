@@ -18,10 +18,10 @@ export function ServicesTabs() {
   return (
     <div className="w-full flex justify-center mb-12">
       <Tabs value={currentTab}>
-        <TabsList>
+        <TabsList className="bg-primary/10 p-1.5 h-auto rounded-lg">
           {tabs.map((tab) => (
             <Link key={tab.href} href={tab.href} passHref legacyBehavior>
-              <TabsTrigger value={tab.href}>
+              <TabsTrigger value={tab.href} className="text-base px-6 py-2 rounded-md">
                 {tab.name}
               </TabsTrigger>
             </Link>
