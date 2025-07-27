@@ -1,9 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Zap, Target, Users } from 'lucide-react';
+import { ArrowRight, Zap, Target, Users, Star } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { EmployeeCard } from '@/components/employee-card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const benefits = [
   {
@@ -44,6 +45,30 @@ const employees = [
     bio: 'Emily designs our cutting-edge course content, ensuring it is relevant and impactful for our students.',
     image: 'https://placehold.co/400x400',
     hint: 'professional woman smiling'
+  },
+];
+
+const testimonials = [
+  {
+    quote: "The 'Leadership in the Digital Age' course was a game-changer for my career. The insights were practical and immediately applicable.",
+    name: 'Sarah Johnson',
+    title: 'HR Manager',
+    avatar: 'https://placehold.co/100x100',
+    hint: 'woman smiling',
+  },
+  {
+    quote: "As someone new to the field, the 'Foundations of HR' course provided the perfect grounding. I feel so much more confident in my role.",
+    name: 'Michael Chen',
+    title: 'HR Coordinator',
+    avatar: 'https://placehold.co/100x100',
+    hint: 'man portrait',
+  },
+  {
+    quote: "The quality of instruction and the supportive community at ElevateHR are top-notch. I highly recommend it to any HR professional.",
+    name: 'David Rodriguez',
+    title: 'Senior HR Business Partner',
+    avatar: 'https://placehold.co/100x100',
+    hint: 'man professional',
   },
 ];
 
@@ -122,6 +147,44 @@ export default function Home() {
           {employees.map((employee) => (
             <EmployeeCard key={employee.name} employee={employee} />
           ))}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="bg-card py-20 md:py-24">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold">What Our Students Say</h2>
+            <p className="mt-3 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Hear from HR professionals who have advanced their careers with ElevateHR.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial) => (
+              <Card key={testimonial.name} className="flex flex-col">
+                <CardContent className="p-6 flex-grow">
+                  <div className="flex mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
+                  <blockquote className="text-foreground/90 italic">"{testimonial.quote}"</blockquote>
+                </CardContent>
+                <CardHeader className="p-6 pt-0 mt-auto">
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.hint} />
+                      <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                    </div>
+                  </div>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
     </>
