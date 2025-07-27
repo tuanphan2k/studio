@@ -8,12 +8,12 @@ import { Separator } from '@/components/ui/separator';
 
 type CourseDetailPageProps = {
   params: {
-    id: string;
+    slug: string;
   };
 };
 
 export default function CourseDetailPage({ params }: CourseDetailPageProps) {
-  const course = courses.find((c) => c.id === params.id);
+  const course = courses.find((c) => c.slug === params.slug);
 
   if (!course) {
     notFound();
